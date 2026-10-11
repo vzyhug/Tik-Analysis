@@ -1,0 +1,16 @@
+# Raw exports and generated data
+data/raw/apify/
+crawled_data/
+data/clean/
+data/features/
+data/predictions/
+data/quarantine/*
+!data/quarantine/g01_pointers.json
+models/
+outputs/powerbi/
+*.log
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+
