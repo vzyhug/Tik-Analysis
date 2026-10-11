@@ -1,0 +1,142 @@
+name: trend-detect
+
+x-hadoop-base: &hadoop-base
+  image: apache/hadoop:3.4.2
+  restart: unless-stopped
+  volumes:
+    - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+    - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+
+x-spark-base: &spark-base
+  image: apache/spark:4.0.2-python3
+  restart: unless-stopped
+  environment:
+    HADOOP_CONF_DIR: /etc/hadoop/conf
+    SPARK_CONF_DIR: /opt/spark/conf
+    PYSPARK_PYTHON: python3
+  volumes:
+    - ../:/workspace
+    - ./hadoop/core-site.xml:/etc/hadoop/conf/core-site.xml:ro
+    - ./hadoop/hdfs-site.xml:/etc/hadoop/conf/hdfs-site.xml:ro
+    - ./spark/spark-defaults.conf:/opt/spark/conf/spark-defaults.conf:ro
+
+services:
+  hdfs-volume-init:
+    image: apache/hadoop:3.4.2
+    user: root
+    entrypoint: ["sh", "-c"]
+    command: ["chown 1000:100 /hadoop/dfs/name /hadoop/dfs/dn1 /hadoop/dfs/dn2 /hadoop/dfs/dn3"]
+    restart: "no"
+    volumes:
+      - namenode_data:/hadoop/dfs/name
+      - datanode_1_data:/hadoop/dfs/dn1
+      - datanode_2_data:/hadoop/dfs/dn2
+      - datanode_3_data:/hadoop/dfs/dn3
+
+  namenode:
+    <<: *hadoop-base
+    hostname: namenode
+    command: ["bash", "/opt/start-namenode.sh"]
+    depends_on:
+      hdfs-volume-init:
+        condition: service_completed_successfully
+    ports:
+      - "9870:9870"
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - ./hadoop/start-namenode.sh:/opt/start-namenode.sh:ro
+      - ../:/workspace:ro
+      - namenode_data:/hadoop/dfs/name
+
+  datanode-1:
+    <<: *hadoop-base
+    hostname: datanode-1
+    command: ["hdfs", "datanode"]
+    depends_on:
+      hdfs-volume-init:
+        condition: service_completed_successfully
+      namenode:
+        condition: service_started
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - datanode_1_data:/hadoop/dfs/data
+
+  datanode-2:
+    <<: *hadoop-base
+    hostname: datanode-2
+    command: ["hdfs", "datanode"]
+    depends_on:
+      hdfs-volume-init:
+        condition: service_completed_successfully
+      namenode:
+        condition: service_started
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - datanode_2_data:/hadoop/dfs/data
+
+  datanode-3:
+    <<: *hadoop-base
+    hostname: datanode-3
+    command: ["hdfs", "datanode"]
+    depends_on:
+      hdfs-volume-init:
+        condition: service_completed_successfully
+      namenode:
+        condition: service_started
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - datanode_3_data:/hadoop/dfs/data
+
+  spark-master:
+    <<: *spark-base
+    hostname: spark-master
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.master.Master", "--host", "spark-master"]
+    ports:
+      - "8080:8080"
+
+  spark-worker-1:
+    <<: *spark-base
+    hostname: spark-worker-1
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "--host", "spark-worker-1", "--cores", "2", "--memory", "1536m", "spark://spark-master:7077"]
+    depends_on: [spark-master]
+    ports:
+      - "8081:8081"
+
+  spark-worker-2:
+    <<: *spark-base
+    hostname: spark-worker-2
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "--host", "spark-worker-2", "--cores", "2", "--memory", "1536m", "spark://spark-master:7077"]
+    depends_on: [spark-master]
+    ports:
+      - "8082:8081"
+
+  spark-driver:
+    <<: *spark-base
+    hostname: spark-driver
+    command: ["sleep", "infinity"]
+    depends_on: [spark-master, namenode]
+    ports:
+      - "4040:4040"
+
+  neo4j:
+    image: neo4j:5.26.30-community
+    profiles: ["graph"]
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: ${NEO4J_AUTH:?Set NEO4J_AUTH in infra/.env}
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  namenode_data:
+  datanode_1_data:
+  datanode_2_data:
+  datanode_3_data:
+  neo4j_data:

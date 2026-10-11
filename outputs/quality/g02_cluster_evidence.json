@@ -1,0 +1,32 @@
+{
+  "schema_version": "g02-evidence-v1",
+  "captured_at_utc": "2026-10-11T15:14:52.038906+00:00",
+  "hdfs_live_datanodes": 3,
+  "bronze_files": 8,
+  "bronze_block_live_replica_counts": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "hdfs_fsck_status": "HEALTHY",
+  "spark_workers": [
+    {
+      "id": "worker-20261011150322-spark-worker-2-46613",
+      "state": "ALIVE",
+      "cores": 2,
+      "memory_mib": 1536
+    },
+    {
+      "id": "worker-20261011150322-spark-worker-1-42605",
+      "state": "ALIVE",
+      "cores": 2,
+      "memory_mib": 1536
+    }
+  ],
+  "smoke_result": "See outputs/quality/g02_spark_smoke.json and g03_event_evidence.json"
+}

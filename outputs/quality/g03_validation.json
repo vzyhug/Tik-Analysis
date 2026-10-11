@@ -1,0 +1,62 @@
+{
+  "schema_version": "g03-validation-v1",
+  "dataset_version": "fb35f4b03d6fc4b3",
+  "counts": {
+    "videos": 4673,
+    "observations": 4673,
+    "quarantine": 52
+  },
+  "local_hdfs_differences": {
+    "videos": {
+      "hdfs_only": 0,
+      "local_only": 0
+    },
+    "observations": {
+      "hdfs_only": 0,
+      "local_only": 0
+    },
+    "quarantine": {
+      "hdfs_only": 0,
+      "local_only": 0
+    }
+  },
+  "quality": {
+    "unique_video_ids": 4673,
+    "null_observed_at": 4673,
+    "confirmed_empty_hashtags": 908,
+    "empty_caption_and_hashtags": 145,
+    "quarantine_by_reason": {
+      "profile_only": 16,
+      "source_error": 36
+    }
+  },
+  "partition_hosts": [
+    [
+      0,
+      "spark-worker-2",
+      1248
+    ],
+    [
+      1,
+      "spark-worker-1",
+      1191
+    ],
+    [
+      2,
+      "spark-worker-2",
+      1140
+    ],
+    [
+      3,
+      "spark-worker-1",
+      1094
+    ]
+  ],
+  "rows_by_worker": {
+    "spark-worker-2": 2388,
+    "spark-worker-1": 2285
+  },
+  "quarantine_pointers_match_g01": true,
+  "zero_play_count": 0,
+  "false_is_ad_count": 4101
+}

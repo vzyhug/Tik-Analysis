@@ -1,0 +1,11 @@
+topic_id,name,include_when,exclude_when,status
+T01,Ẩm thực,Video nói về món ăn; nấu ăn; đánh giá quán hoặc đồ uống,Chỉ xuất hiện đồ ăn thoáng qua,draft
+T02,Làm đẹp và thời trang,Video hướng dẫn hoặc đánh giá trang điểm; chăm sóc da; trang phục,Chỉ có ngoại hình người đăng mà không bàn về chủ đề,draft
+T03,Học tập và kiến thức,Video giải thích kiến thức; hướng dẫn học; khoa học hoặc giáo dục,Mẹo vui không có nội dung học tập rõ,draft
+T04,Sức khỏe và thể thao,Video về vận động; tập luyện; thi đấu; chăm sóc sức khỏe,Chỉ mặc đồ thể thao hoặc nhắc đến sức khỏe thoáng qua,draft
+T05,Trò chơi,Video về game; chơi game; bình luận hoặc hướng dẫn game,Chỉ dùng hiệu ứng giống game,draft
+T06,Âm nhạc và khiêu vũ,Video biểu diễn; hướng dẫn; thảo luận về nhạc hoặc nhảy,Chỉ dùng nhạc nền phổ biến,draft
+T07,Du lịch và ngoài trời,Video giới thiệu hành trình; địa điểm tham quan; hoạt động ngoài trời,Chỉ gắn location mà nội dung không nói về nơi đó,draft
+T08,Gia đình và thú cưng,Video tập trung vào đời sống gia đình; trẻ em; chăm sóc hoặc câu chuyện thú cưng,Chỉ có người thân hoặc thú cưng xuất hiện thoáng qua,draft
+T09,Giải trí và hài hước,Video có tiểu phẩm; thử thách; nội dung gây cười hoặc biểu diễn giải trí,Chỉ là video thuộc tài khoản người nổi tiếng,draft
+T10,Đời sống và mẹo thực hành,Video về sinh hoạt; nhà cửa; DIY hoặc mẹo làm việc hằng ngày,Chỉ quay cảnh đời thường không có chủ đề xác định,draft

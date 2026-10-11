@@ -1,0 +1,53 @@
+{
+  "schema_version": "g02-bronze-v1",
+  "files": [
+    {
+      "pack": "PACK1",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK1/dataset_tiktok-profile-scraper_2026-10-11_09-59-10-664_PACK1.json",
+      "sha256": "b8f00482831f82035f29ddb120a790db986c1d1a80fd4dabde7b972f94ec8745",
+      "size_bytes": 3868037
+    },
+    {
+      "pack": "PACK2",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK2/dataset_tiktok-profile-scraper_2026-10-11_10-13-51-377_PACK2.json",
+      "sha256": "0f5a466efc246e50abf988f98c8528de5a311cbece9b97d265430275803a0cc2",
+      "size_bytes": 3699187
+    },
+    {
+      "pack": "PACK3",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK3/dataset_tiktok-profile-scraper_2026-10-11_10-10-07-252_PACK3.json",
+      "sha256": "6b73e4eb573132e6b6a8c717321ceb6d7717d8d53346ca1c2357b5c1821475e1",
+      "size_bytes": 3687034
+    },
+    {
+      "pack": "PACK4",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK4/dataset_tiktok-profile-scraper_2026-10-11_10-59-07-053_PACK4.json",
+      "sha256": "49db388aa0c5c1ce386ae66c05be87b0ca391edc0d247b29ffa04ee3920f2783",
+      "size_bytes": 3996363
+    },
+    {
+      "pack": "PACK5",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK5/dataset_tiktok-profile-scraper_2026-10-11_11-35-52-295_PACK5.json",
+      "sha256": "e2ea301baabb22c82c2acaa8567ac2453d3111515a13df6239b69a06ed8aac4a",
+      "size_bytes": 3324010
+    },
+    {
+      "pack": "PACK6",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK6/dataset_tiktok-profile-scraper_2026-10-11_11-17-52-085_PACK6.json",
+      "sha256": "0833cd072f9189329505d1c84fb50fc5de72b3e1626d4a91333834592ceb8dc1",
+      "size_bytes": 3074645
+    },
+    {
+      "pack": "PACK7",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK7/dataset_tiktok-profile-scraper_2026-10-11_11-12-35-339_PACK7.json",
+      "sha256": "45aff2a0ae0261403cf0688a414a90e91176f347fcb9cec4e57268b19270c8c5",
+      "size_bytes": 1055121
+    },
+    {
+      "pack": "PACK8",
+      "hdfs_path": "/bigdata-topic/bronze/apify/PACK8/dataset_tiktok-profile-scraper_2026-10-11_10-52-58-411_PACK8.json",
+      "sha256": "53266e2a85d5a8988c00390aa5cecf053e61fe12d74396bb061bdf4cbcf28e0b",
+      "size_bytes": 3366503
+    }
+  ]
+}

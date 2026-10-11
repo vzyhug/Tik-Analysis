@@ -10,6 +10,17 @@ from scripts import intake
 
 
 class IntakeTests(unittest.TestCase):
+    def test_kol_reference_reconciliation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "kol.csv"
+            path.write_text("username,category_id,category_name\n@Alice,1,Food\n"
+                            "alice,2,Travel\nbob,1,Food\n", encoding="utf-8")
+            result = intake.reconcile_kol(path, {"alice"}, {"alice"})
+            self.assertEqual(result["rows"], 3)
+            self.assertEqual(result["unique_usernames"], 2)
+            self.assertEqual(result["unique_categories"], 2)
+            self.assertEqual(result["usernames_without_source_record"], ["bob"])
+
     def test_jsonl_and_long_id(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "rows.jsonl"

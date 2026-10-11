@@ -1,0 +1,12 @@
+{
+  "dataset_version": "fb35f4b03d6fc4b3",
+  "schema_version": "silver-v1",
+  "source_records": 4725,
+  "counts": {
+    "videos": 4673,
+    "observations": 4673,
+    "quarantine": 52
+  },
+  "status": "already_published",
+  "silver_path": "file:///workspace/outputs/local-silver/datasets/fb35f4b03d6fc4b3"
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "g05-review-queue-v1",
+  "seed": "g05-manual-review-v1",
+  "sample_per_category": 4,
+  "videos_to_review": 96,
+  "reference_category_coverage": {
+    "C01": {
+      "eligible_videos": 237,
+      "selected": 4
+    },
+    "C02": {
+      "eligible_videos": 250,
+      "selected": 4
+    },
+    "C03": {
+      "eligible_videos": 225,
+      "selected": 4
+    },
+    "C04": {
+      "eligible_videos": 239,
+      "selected": 4
+    },
+    "C05": {
+      "eligible_videos": 240,
+      "selected": 4
+    },
+    "C06": {
+      "eligible_videos": 247,
+      "selected": 4
+    },
+    "C07": {
+      "eligible_videos": 228,
+      "selected": 4
+    },
+    "C08": {
+      "eligible_videos": 232,
+      "selected": 4
+    },
+    "C09": {
+      "eligible_videos": 232,
+      "selected": 4
+    },
+    "C10": {
+      "eligible_videos": 200,
+      "selected": 4
+    },
+    "C11": {
+      "eligible_videos": 219,
+      "selected": 4
+    },
+    "C12": {
+      "eligible_videos": 212,
+      "selected": 4
+    },
+    "C13": {
+      "eligible_videos": 231,
+      "selected": 4
+    },
+    "C14": {
+      "eligible_videos": 212,
+      "selected": 4
+    },
+    "C15": {
+      "eligible_videos": 255,
+      "selected": 4
+    },
+    "C16": {
+      "eligible_videos": 244,
+      "selected": 4
+    },
+    "C17": {
+      "eligible_videos": 187,
+      "selected": 4
+    },
+    "C18": {
+      "eligible_videos": 144,
+      "selected": 4
+    },
+    "C19": {
+      "eligible_videos": 244,
+      "selected": 4
+    },
+    "C20": {
+      "eligible_videos": 236,
+      "selected": 4
+    },
+    "C21": {
+      "eligible_videos": 296,
+      "selected": 4
+    },
+    "C22": {
+      "eligible_videos": 222,
+      "selected": 4
+    },
+    "C23": {
+      "eligible_videos": 290,
+      "selected": 4
+    },
+    "C24": {
+      "eligible_videos": 297,
+      "selected": 4
+    }
+  },
+  "label_policy": "All selected videos are unreviewed; KOL categories are sampling strata only"
+}

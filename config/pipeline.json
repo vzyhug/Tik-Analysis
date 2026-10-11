@@ -1,0 +1,17 @@
+{
+  "schema_version": "silver-v1",
+  "timestamp_storage_timezone": "UTC",
+  "calendar_timezone": "Asia/Ho_Chi_Minh",
+  "modes": {
+    "distributed-demo": {
+      "input_glob": "hdfs://namenode:8020/bigdata-topic/bronze/apify/*/*.json",
+      "silver_root": "hdfs://namenode:8020/bigdata-topic/silver",
+      "spark_master": "spark://spark-master:7077"
+    },
+    "local": {
+      "input_glob": "file:///workspace/data/raw/apify/*.json",
+      "silver_root": "file:///workspace/outputs/local-silver",
+      "spark_master": "local[2]"
+    }
+  }
+}

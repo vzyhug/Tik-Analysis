@@ -1,0 +1,181 @@
+{
+  "schema_version": "g03-event-evidence-v1",
+  "apps": [
+    {
+      "event_log": "eventlog_v2_app-20261011150725-0003",
+      "app_name": "g03-normalize-fb35f4b03d6fc4b3",
+      "app_id": "app-20261011150725-0003",
+      "executor_hosts": {
+        "0": "spark-worker-2",
+        "1": "spark-worker-1"
+      },
+      "successful_tasks_by_executor": {
+        "0": 63,
+        "1": 74
+      },
+      "successful_tasks_by_host": {
+        "spark-worker-2": 63,
+        "spark-worker-1": 74
+      },
+      "successful_tasks": 137,
+      "stages_with_tasks": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17,
+        18,
+        20,
+        23,
+        24,
+        25,
+        27,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56
+      ]
+    },
+    {
+      "event_log": "eventlog_v2_app-20261011150820-0004",
+      "app_name": "g03-normalize-fb35f4b03d6fc4b3",
+      "app_id": "app-20261011150820-0004",
+      "executor_hosts": {
+        "0": "spark-worker-2",
+        "1": "spark-worker-1"
+      },
+      "successful_tasks_by_executor": {
+        "0": 11,
+        "1": 7
+      },
+      "successful_tasks_by_host": {
+        "spark-worker-2": 11,
+        "spark-worker-1": 7
+      },
+      "successful_tasks": 18,
+      "stages_with_tasks": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "event_log": "eventlog_v2_app-20261011151455-0007",
+      "app_name": "g03-normalize-fb35f4b03d6fc4b3",
+      "app_id": "app-20261011151455-0007",
+      "executor_hosts": {
+        "0": "spark-worker-2",
+        "1": "spark-worker-1"
+      },
+      "successful_tasks_by_executor": {
+        "0": 9,
+        "1": 9
+      },
+      "successful_tasks_by_host": {
+        "spark-worker-2": 9,
+        "spark-worker-1": 9
+      },
+      "successful_tasks": 18,
+      "stages_with_tasks": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "event_log": "eventlog_v2_app-20261011151642-0008",
+      "app_name": "g03-normalize-fb35f4b03d6fc4b3",
+      "app_id": "app-20261011151642-0008",
+      "executor_hosts": {
+        "0": "spark-worker-2",
+        "1": "spark-worker-1"
+      },
+      "successful_tasks_by_executor": {
+        "0": 70,
+        "1": 67
+      },
+      "successful_tasks_by_host": {
+        "spark-worker-2": 70,
+        "spark-worker-1": 67
+      },
+      "successful_tasks": 137,
+      "stages_with_tasks": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17,
+        18,
+        20,
+        23,
+        24,
+        25,
+        27,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56
+      ]
+    }
+  ]
+}
