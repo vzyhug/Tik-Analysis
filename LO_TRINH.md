@@ -154,7 +154,7 @@ Không diễn giải views snapshot là views phát sinh theo từng tuần; cù
 
 | Giai đoạn | Trạng thái ban đầu | Bằng chứng/đầu ra thực tế | Việc còn thiếu |
 |---|---|---|---|
-| Ngày 1 — Hạ tầng và dữ liệu | in_progress | G01–G03 đã đạt gate: Bronze replica/read-back, Spark hai Worker, Silver 4.673/4.673/52 đối soát local; Neo4j đã chạy | Người thực hiện duyệt taxonomy nháp và bắt đầu rà soát 96 Video trong hàng chờ |
+| Ngày 1 — Hạ tầng và dữ liệu | not_started | Chưa chạy pipeline; đã có kiểm kê JSON trong phiên thiết kế | Manifest, Silver và bằng chứng cluster |
 | Ngày 2 — Đồ thị và nhãn | not_started | Đã chốt schema trong README/AGENTS | Loader/query, graph thật, tập nhãn/split |
 | Ngày 3 — DL4J và Topic | not_started | Chưa xác nhận train/evaluate | Model/metrics/predictions và HAS_TOPIC |
 | Ngày 4 — Tổng hợp và bàn giao | not_started | Chưa xác nhận Gold/dashboard | Aggregate, Power BI, kiểm chứng và báo cáo |

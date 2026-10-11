@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter, defaultdict
-import csv
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
@@ -74,49 +73,6 @@ def tag_key(value: str) -> str:
     return unicodedata.normalize("NFC", value).strip().lstrip("#").casefold()
 
 
-def username_key(value: str) -> str:
-    return value.strip().lstrip("@").casefold()
-
-
-def reconcile_kol(path: Path, input_usernames: set[str], video_input_usernames: set[str]) -> dict:
-    with path.open("r", encoding="utf-8-sig", newline="") as stream:
-        reader = csv.DictReader(stream)
-        required = {"username", "category_id", "category_name"}
-        if not required.issubset(reader.fieldnames or []):
-            raise ValueError(f"KOL CSV missing columns {sorted(required)}: {path}")
-        rows = list(reader)
-    names = set()
-    pairs = set()
-    categories = defaultdict(set)
-    invalid_rows = []
-    for line_number, row in enumerate(rows, start=2):
-        username = username_key(row["username"] or "")
-        category_id = (row["category_id"] or "").strip()
-        category_name = (row["category_name"] or "").strip()
-        if not username or not category_id or not category_name:
-            invalid_rows.append(line_number)
-            continue
-        names.add(username)
-        pairs.add((username, category_id, category_name))
-        categories[category_id].add(category_name)
-    if invalid_rows:
-        raise ValueError(f"KOL CSV has incomplete rows: {invalid_rows[:20]}")
-    return {
-        "source_file": path.name,
-        "sha256": digest(path),
-        "rows": len(rows),
-        "unique_usernames": len(names),
-        "unique_categories": len(categories),
-        "duplicate_username_category_rows": len(rows) - len(pairs),
-        "category_id_name_conflicts": {key: sorted(values) for key, values in categories.items() if len(values) > 1},
-        "usernames_with_any_source_record": len(names & input_usernames),
-        "usernames_with_video": len(names & video_input_usernames),
-        "usernames_without_source_record": sorted(names - input_usernames),
-        "usernames_with_source_record_but_no_video": sorted((names & input_usernames) - video_input_usernames),
-        "source_input_usernames_not_in_csv": sorted(input_usernames - names),
-    }
-
-
 def write_json(path: Path, content: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     staged = path.with_suffix(path.suffix + ".tmp")
@@ -147,7 +103,7 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
     duplicate_pointers = []
     conflict_pointers = []
     rejected = []
-    authors, author_usernames, input_usernames, video_input_usernames = set(), set(), set(), set()
+    authors, author_usernames, input_usernames = set(), set(), set()
     sounds, hashtags, effects, locations = set(), set(), set(), set()
     published = []
     for pack in range(1, 9):
@@ -175,7 +131,7 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
             counts["records"] += 1
             local["records"] += 1
             if isinstance(record, dict) and isinstance(record.get("input"), str):
-                input_usernames.add(username_key(record["input"]))
+                input_usernames.add(record["input"].strip().casefold())
             if not isinstance(record, dict):
                 reason = "not_object"
             elif record.get("error") is not None:
@@ -209,8 +165,6 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
                 video_seen[video_id] = pointer
             counts["video_records"] += 1
             local["video_records"] += 1
-            if isinstance(record.get("input"), str):
-                video_input_usernames.add(username_key(record["input"]))
             if not record.get("text"):
                 counts["empty_or_missing_text"] += 1
             if record.get("hashtags") == []:
@@ -235,7 +189,7 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
                 authors.add(str(author))
             username = value_at(record, "authorMeta.name")
             if isinstance(username, str):
-                author_usernames.add(username_key(username))
+                author_usernames.add(username.strip().casefold())
             sound = value_at(record, "musicMeta.musicId")
             if sound is not None:
                 sounds.add(str(sound))
@@ -283,20 +237,6 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
         "conflicts": conflict_pointers,
         "quarantine": rejected,
     }
-    kol_source = ROOT / "kol.csv"
-    kol_reference = ROOT / "data/reference/kol.csv"
-    if kol_source.exists():
-        kol_reference.parent.mkdir(parents=True, exist_ok=True)
-        if kol_reference.exists():
-            if digest(kol_reference) != digest(kol_source):
-                raise ValueError(f"KOL reference differs; refusing overwrite: {kol_reference}")
-        else:
-            shutil.copyfile(kol_source, kol_reference)
-            if digest(kol_reference) != digest(kol_source):
-                kol_reference.unlink()
-                raise ValueError(f"KOL reference copy checksum mismatch: {kol_source}")
-    if kol_reference.exists():
-        result["kol_reference"] = reconcile_kol(kol_reference, input_usernames, video_input_usernames)
     write_json(ROOT / "data/raw/manifests/apify_g01.json", result)
     write_json(reports / "g01_inventory.json", result)
     write_json(ROOT / "data/quarantine/g01_pointers.json",
@@ -317,17 +257,9 @@ def inventory(source: Path, raw: Path, reports: Path) -> dict:
                "| Field | Absent | Null |", "|---|---:|---:|"]
     for field in FIELDS:
         report.append(f"| `{field}` | {field_missing[field]} | {field_null[field]} |")
-    if "kol_reference" in result:
-        k = result["kol_reference"]
-        report += ["", "## Đối soát danh sách KOL", "",
-                   f'- `{k["source_file"]}`: {k["rows"]} dòng, {k["unique_usernames"]} username, {k["unique_categories"]} danh mục; SHA-256 `{k["sha256"]}`.',
-                   f'- {k["usernames_with_any_source_record"]} username có record nguồn; {k["usernames_with_video"]} có Video.',
-                   f'- {len(k["usernames_without_source_record"])} username không xuất hiện trong record nguồn; {len(k["usernames_with_source_record_but_no_video"])} có record nhưng không có Video.',
-                   f'- {k["duplicate_username_category_rows"]} dòng ánh xạ trùng; {len(k["category_id_name_conflicts"])} category ID có tên xung đột.',
-                   "Danh sách username cần đối soát chi tiết nằm trong manifest JSON. Danh mục KOL là tham khảo, không tự gán thành Topic cho Video."]
     report += ["", "Chi tiết schema từng PACK, pointer quarantine, duplicate và conflict nằm trong `g01_inventory.json`.",
                "`source_error`/`profile_only` không là Video. Duplicates/conflicts cùng video_id + collection_id được báo, không âm thầm chọn bản cuối.",
-               "Dữ liệu này là mẫu KOL đã chọn, không đại diện toàn TikTok."]
+               "Dữ liệu này là mẫu KOL đã chọn, không đại diện toàn TikTok. Danh sách 578 KOL đầu vào chưa có file `kol.csv` để đối soát."]
     path = reports / "g01_inventory.md"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(report) + "\n", encoding="utf-8")

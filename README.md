@@ -13,25 +13,7 @@ python scripts/intake.py
 python -m unittest discover -s tests -v
 ```
 
-Đầu ra: `data/raw/manifests/apify_g01.json`, `outputs/quality/g01_inventory.json`, `outputs/quality/g01_inventory.md` và pointer lỗi ở `data/quarantine/g01_pointers.json`. Mapping các trường đã xác nhận từ 8 PACK nằm ở `config/apify_mapping.json`; trạng thái G01–G09 ở `reports/progress.md`. `data/reference/kol.csv` đã được đối soát: 720 dòng ánh xạ, 578 username, 24 danh mục. G01–G03 đã đạt gate trên dữ liệu thật và Docker cluster; bằng chứng ở [báo cáo ngày 1](reports/day1.md). Java hệ thống là 25; Spark chạy Java 17 trong image riêng, DL4J chưa triển khai.
-
-### Chạy lại G01–G03 trên Windows
-
-Clone repo rồi cung cấp riêng 8 PACK nguyên gốc trong `crawled_data/`; raw không được commit. Docker Desktop cần bật Linux Engine và đủ RAM. Từ root project:
-
-```powershell
-python scripts/intake.py
-docker compose --env-file infra/.env.example -f infra/compose.yaml up -d namenode datanode-1 datanode-2 datanode-3 spark-master spark-worker-1 spark-worker-2 spark-driver
-python scripts/upload_bronze.py
-python scripts/capture_g02_evidence.py
-docker compose --env-file infra/.env.example -f infra/compose.yaml exec -T spark-driver /opt/spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client /workspace/jobs/spark/01_prepare_data.py
-```
-
-Hai chế độ `distributed-demo` và `local` cùng đường dẫn được định nghĩa ở `config/pipeline.json`. Để so sánh với local và xác nhận Silver sau khi job hoàn thành, chạy cùng `spark-submit` với `--master 'local[2]'`, `--conf spark.eventLog.enabled=false`, `--mode local`; sau đó submit `jobs/spark/02_verify_data.py` lên Standalone. Lệnh `jobs/spark/03_event_evidence.py` đọc event log bằng Spark codec để tóm tắt task từng Worker. Không xóa volume/checkpoint khi chạy lại; Bronze từ chối file trùng khác checksum và Silver kiểm tra count nếu version đã xuất bản.
-
-Neo4j dùng profile riêng để tránh chạy job nặng cùng lúc. Sao chép `infra/.env.example` thành `infra/.env`, thay mật khẩu mẫu, rồi chạy `docker compose --env-file infra/.env -f infra/compose.yaml --profile graph up -d neo4j`. Mật khẩu chỉ ở `.env` local (bị Git bỏ qua). Với Docker được cấp 8 GiB RAM, mỗi Worker hiện giới hạn 2 core/1536 MiB; theo dõi bộ nhớ trước khi tăng lên mức tham khảo 2 GiB. HDFS UI: `http://localhost:9870`; Spark Master UI: `http://localhost:8080`; Neo4j Browser: `http://localhost:7474`.
-
-Để bắt đầu gán nhãn, chạy `python scripts/prepare_label_review.py`. File `data/labels/review_queue.csv` được tạo local, không commit caption; script từ chối ghi đè nếu đã có dòng được rà soát. Đọc `data/reference/labeling_guide_v0.md` và duyệt `topics_v0_draft.csv` trước khi dùng nhãn để train. Cột danh mục KOL trong queue chỉ phục vụ lấy mẫu.
+Đầu ra: `data/raw/manifests/apify_g01.json`, `outputs/quality/g01_inventory.json`, `outputs/quality/g01_inventory.md` và pointer lỗi ở `data/quarantine/g01_pointers.json`. Mapping các trường đã xác nhận từ 8 PACK nằm ở `config/apify_mapping.json`; trạng thái G01–G09 ở `reports/progress.md`. Hiện chưa có `data/reference/kol.csv` để đối soát đầy đủ 578 username đầu vào, nên G01 còn `in_progress`. Các giai đoạn G02–G09 chưa triển khai. Docker CLI có sẵn nhưng daemon chưa hoạt động tại lần kiểm tra này; Java hệ thống là 25, chưa kiểm chứng với DL4J/Spark. Không coi bản sao raw trên Windows là HDFS Bronze.
 
 ## 1. Phạm vi và trạng thái
 
@@ -593,7 +575,9 @@ mkdir jobs\spark apps\dl4j graph infra config scripts models outputs\quality out
 
 Mở root bằng VS Code; mở riêng `apps/dl4j/` bằng IntelliJ khi project Maven được tạo. Cài và kiểm tra Docker Desktop trước khi triển khai dịch vụ.
 
-**Trạng thái hiện tại:** G01–G03 đã chạy trên 8 PACK thật và đạt gate; lệnh đã kiểm tra ở phần đầu README. Các tên script của G04 trở đi trong kế hoạch vẫn là đầu ra dự kiến cho tới khi có file và kiểm tra tương ứng. Lệnh Maven/DL4J chưa có entry point.
+**Task đầu tiên cho coding agent:** đọc `AGENTS.md` và làm G01: kiểm kê schema thực tế trong `data/raw/apify/`, tạo manifest và báo cáo chất lượng. Tiếp theo G02 dựng HDFS/Spark; G03 chuẩn hóa trên cụm, có thể kiểm tra logic local trước. Khi chưa có file video, chỉ xây khung và fixture, không tuyên bố đã kiểm tra dữ liệu thật.
+
+Lệnh chạy Compose/Spark/Maven của project sẽ được bổ sung sau khi các file cấu hình và entry point tương ứng tồn tại và được kiểm tra. Không coi các tên file dự kiến ở trên là chương trình đã chạy được.
 
 ## 12. Kiểm tra và vận hành
 

@@ -56,14 +56,6 @@ Nguồn: 8 PACK trong `data/raw/apify/`; checksum SHA-256 trong manifest.
 | `isSponsored` | 0 | 0 |
 | `hasTikTokShopProduct` | 0 | 0 |
 
-## Đối soát danh sách KOL
-
-- `kol.csv`: 720 dòng, 578 username, 24 danh mục; SHA-256 `8beab66e5e8b6356864c83c3fc5fde493b3bd7f7f46b213d5b1fa464c5396e6d`.
-- 527 username có record nguồn; 475 có Video.
-- 51 username không xuất hiện trong record nguồn; 52 có record nhưng không có Video.
-- 0 dòng ánh xạ trùng; 0 category ID có tên xung đột.
-Danh sách username cần đối soát chi tiết nằm trong manifest JSON. Danh mục KOL là tham khảo, không tự gán thành Topic cho Video.
-
 Chi tiết schema từng PACK, pointer quarantine, duplicate và conflict nằm trong `g01_inventory.json`.
 `source_error`/`profile_only` không là Video. Duplicates/conflicts cùng video_id + collection_id được báo, không âm thầm chọn bản cuối.
-Dữ liệu này là mẫu KOL đã chọn, không đại diện toàn TikTok.
+Dữ liệu này là mẫu KOL đã chọn, không đại diện toàn TikTok. Danh sách 578 KOL đầu vào chưa có file `kol.csv` để đối soát.
