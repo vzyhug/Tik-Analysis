@@ -1,0 +1,110 @@
+{
+  "model_version": "vitied-g05-ae64-live-20261016",
+  "parent_model_version": null,
+  "feature_version": "vitied-g05-hashidf512-v3",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "architecture": "512-128-64-128-512 MSE autoencoder",
+  "training": "two container JVMs, Adam 0.003 local epochs, sample-weighted synchronous parameter averaging",
+  "seed": 42,
+  "batch_size": 64,
+  "rounds": 3,
+  "history": [
+    {
+      "round": 1,
+      "workers": [
+        {
+          "samples": 3176,
+          "batches": 50,
+          "host": "spark-worker-1",
+          "parameter_delta_l2": 5.59108829498291,
+          "training_seconds": 1.318084675
+        },
+        {
+          "samples": 3175,
+          "batches": 50,
+          "host": "spark-worker-2",
+          "parameter_delta_l2": 5.581485271453857,
+          "training_seconds": 1.201131858
+        }
+      ],
+      "validation": {
+        "samples": 1070,
+        "mse": 0.0018809937706617552,
+        "zero_mse": 0.001953125299415856
+      },
+      "model_sha256": "a0c6aa0c8f0221820c00770b1c7aedce1cf955c94080713ad97b70e712b94985"
+    },
+    {
+      "round": 2,
+      "workers": [
+        {
+          "samples": 3176,
+          "batches": 50,
+          "host": "spark-worker-1",
+          "parameter_delta_l2": 7.438590049743652,
+          "training_seconds": 1.141571418
+        },
+        {
+          "samples": 3175,
+          "batches": 50,
+          "host": "spark-worker-2",
+          "parameter_delta_l2": 7.167710304260254,
+          "training_seconds": 1.222015534
+        }
+      ],
+      "validation": {
+        "samples": 1070,
+        "mse": 0.001798807286492018,
+        "zero_mse": 0.001953125299415856
+      },
+      "model_sha256": "0dfaef1979e2252a224dc3e34b4cf5b2977798017a7fcb04ba97afcc93595c1c"
+    },
+    {
+      "round": 3,
+      "workers": [
+        {
+          "samples": 3176,
+          "batches": 50,
+          "host": "spark-worker-1",
+          "parameter_delta_l2": 8.725858688354492,
+          "training_seconds": 1.487995696
+        },
+        {
+          "samples": 3175,
+          "batches": 50,
+          "host": "spark-worker-2",
+          "parameter_delta_l2": 8.761157989501953,
+          "training_seconds": 1.472618161
+        }
+      ],
+      "validation": {
+        "samples": 1070,
+        "mse": 0.0017282755088026279,
+        "zero_mse": 0.001953125299415856
+      },
+      "model_sha256": "bf7b846ea9dcfe912a4396a46beae01ff0afd663fcc16c532e67f735b5cc2590"
+    }
+  ],
+  "distributed_train_seconds": 58.999040399998194,
+  "initial_validation": {
+    "samples": 1070,
+    "mse": 0.0022332688358342534,
+    "zero_mse": 0.001953125299415856
+  },
+  "best_round": 3,
+  "best_validation_mse": 0.0017282755088026279,
+  "test": {
+    "samples": 1341,
+    "mse": 0.0017343668474091424,
+    "zero_mse": 0.001953124816652379
+  },
+  "best_model_sha256": "bf7b846ea9dcfe912a4396a46beae01ff0afd663fcc16c532e67f735b5cc2590",
+  "embedding_counts": {
+    "train": 6351,
+    "validation": 1070,
+    "test": 1341
+  },
+  "created_at_utc": "2026-10-15T17:18:33.685128+00:00",
+  "passed": true,
+  "directory": "outputs\\g05\\models\\vitied-g05-ae64-live-20261016"
+}

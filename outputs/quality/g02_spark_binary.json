@@ -1,0 +1,42 @@
+{
+  "diagnostic_only": true,
+  "application_id": "app-20261013102508-0001",
+  "master": "spark://spark-master:7077",
+  "executor_hosts_registered": [
+    "spark-driver",
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "worker_hosts_with_tasks": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "source_files": {
+    "training_data.csv": {
+      "source_file": "training_data.csv",
+      "bytes": 16189863,
+      "sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "expected_bytes": 16189863,
+      "expected_sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10"
+    },
+    "streaming_data.csv": {
+      "source_file": "streaming_data.csv",
+      "bytes": 1944254,
+      "sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "expected_bytes": 1944254,
+      "expected_sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da"
+    }
+  },
+  "spark_hdfs_write_readback": {
+    "streaming_data.csv": {
+      "bytes": 1944254,
+      "sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da"
+    },
+    "training_data.csv": {
+      "bytes": 16189863,
+      "sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10"
+    }
+  },
+  "spark_hdfs_path": "hdfs://namenode:9000/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check",
+  "passed": true
+}

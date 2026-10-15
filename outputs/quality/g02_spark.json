@@ -1,0 +1,40 @@
+{
+  "diagnostic_only": true,
+  "application_id": "app-20261013102207-0000",
+  "master": "spark://spark-master:7077",
+  "executor_hosts_registered": [
+    "spark-driver",
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "worker_hosts_with_tasks": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "sources": {
+    "training_data.csv": {
+      "rows": 29633,
+      "expected_rows": 29636,
+      "worker_hosts_with_tasks": [
+        "spark-worker-1",
+        "spark-worker-2"
+      ],
+      "input_path": "hdfs://namenode:9000/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/training_data.csv"
+    },
+    "streaming_data.csv": {
+      "rows": 5114,
+      "expected_rows": 5114,
+      "worker_hosts_with_tasks": [
+        "spark-worker-1",
+        "spark-worker-2"
+      ],
+      "input_path": "hdfs://namenode:9000/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/streaming_data.csv"
+    }
+  },
+  "spark_hdfs_write_readback": {
+    "streaming_data.csv": 5114,
+    "training_data.csv": 29633
+  },
+  "spark_hdfs_path": "hdfs://namenode:9000/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check",
+  "passed": false
+}

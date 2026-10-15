@@ -1,23 +1,43 @@
-# Tiến độ G01–G09
+# Tiến độ chuyển nguồn ViTIED — 13/10/2026
 
-| Giai đoạn | Trạng thái | Bằng chứng và phần còn thiếu |
-|---|---|---|
-| G01 | in_progress | Đã kiểm kê 8 PACK thật bằng `python scripts/intake.py`; manifest, báo cáo và pointer quarantine trong `data/raw/manifests/`, `outputs/quality/`, `data/quarantine/`. Chưa có `data/reference/kol.csv` để đối soát danh sách 578 KOL đầu vào. |
-| G02 | not_started | Docker CLI/Compose có sẵn; Docker daemon chưa chạy. Chưa có cluster hoặc bằng chứng replica/read-back. |
-| G03 | not_started | Chưa có job Spark, Silver, HDFS Bronze hoặc bằng chứng task hai worker. |
-| G04 | not_started | Chưa có Neo4j hoặc graph loader. |
-| G05 | not_started | Chưa có nhãn video kiểm tra hoặc model DL4J. |
-| G06 | not_started | Chưa có Topic active, aggregate graph hoặc Gold. |
-| G07 | not_started | Chưa có export/dashboard Power BI. |
-| G08 | not_started | Chưa có NiFi/Kafka replay. |
-| G09 | not_started | Chưa có nghiệm thu end-to-end/benchmark. |
+Đây là tiến độ **ViTIED** theo [README](../README.md). Repository và các kho dữ liệu hiện chỉ giữ nguồn ViTIED cùng hạ tầng dùng chung. Trạng thái từng gate dựa trên bằng chứng của chính hai CSV ViTIED. Tra bảng công nghệ theo công đoạn, lệnh xem log và trạng thái container trong [architecture-and-logs](../docs/architecture-and-logs.md).
 
-## Việc đã chạy ngày 11/10/2026
+**Cleanup 14/10/2026:** đã gỡ dữ liệu/mã/output của nguồn trước khỏi workspace và các nhánh HDFS riêng; Neo4j còn 0 node, 0 relationship, 0 constraint ứng dụng; PostgreSQL không còn schema `bi`. NameNode được recreate để bỏ mount raw cũ nhưng giữ volume HDFS. Sau cleanup, [Bronze SHA](../outputs/quality/g03_bronze.json), [HDFS fsck](../outputs/quality/g03_hdfs.json) và [đối chiếu Silver](../outputs/quality/g03_verify.json) đều `passed=true`. M1 ViTIED giữ trạng thái `done`.
 
-- `python scripts/intake.py`: 4.725 record, 4.673 Video ID, 36 lỗi nguồn, 16 record profile only; SHA-256 theo PACK và schema từng file trong manifest.
-- `python -m unittest discover -s tests -v`: kiểm tra đọc JSONL, ID dài, duplicate/conflict, null policy và bảo vệ raw (chạy lại sau khi sửa test).
-- Môi trường: Python 3.13.0; Docker CLI 29.1.3/Compose v5.0.0-desktop.1; Java 25.0.1; Maven 3.9.12. Docker daemon không kết nối được, chưa xác nhận runtime Spark/Hadoop/DL4J.
+| Giai đoạn | Trạng thái | Bằng chứng hiện có | Gate còn thiếu |
+|---|---|---|---|
+| G01 | `done` trên source version hiện tại | [Báo cáo nghiệm thu](../GD1.md), SHA-256 trong [manifest](../data/raw/manifests/vitied_source_20261013.json), [đối soát](../outputs/quality/vitied_g01.json), [bảng ID](../outputs/quality/vitied_id_resolution.csv), [quarantine](../data/quarantine/vitied_g01_pointers.csv), 4 unit test đạt | Nếu CSV nguồn thay đổi phải chạy lại G01; nhãn Topic cấp bài thuộc G05 |
+| G02 | `done` | [Báo cáo nghiệm thu](../GD2.md), [HDFS](../outputs/quality/g02_hdfs.json), [sau restart](../outputs/quality/g02_hdfs_restart.json), [fsck](../outputs/quality/g02_hdfs_fsck.txt), [Spark hai worker](../outputs/quality/g02_spark_binary.json): hai CSV khớp SHA-256; 3 DataNode/replica 2; task trên hai worker, Parquet read-back | Parser CSV Spark hụt 3 dòng training; đã xử lý ở G03 |
+| G03 | `done` trên source version hiện tại | [Báo cáo nghiệm thu](../GD3.md), [Bronze SHA](../outputs/quality/g03_bronze.json), [Silver/read-back/two workers](../outputs/quality/g03_silver.json), [đối chiếu G01/local](../outputs/quality/g03_verify.json), [HDFS fsck](../outputs/quality/g03_hdfs.json): 34.750 raw = 34.750 accepted + 0 quarantine, 9.114 Post | Nếu đổi source/schema phải tạo release mới và chạy lại đối chiếu; Sound ID nguồn hiện unresolved |
+| G04 | `done` cho quan hệ có bằng chứng trên source version hiện tại | [Báo cáo nghiệm thu](../GD4.md), [Spark export/read-back/checksum/two workers](../outputs/quality/g04_graph_export.json), [Neo4j count/reload/constraints/projection](../outputs/quality/g04_graph_load.json): 9.114 Post, 10.549 Hashtag, 40.624 HAS_HASHTAG; reload không tăng count | Sound/USES_SOUND đợi ID xác thực; Topic/HAS_TOPIC đợi nhãn cấp Post ở G05 |
+| G05 | `in_progress` (train phân tán đạt, nhãn Topic chưa duyệt) | [Báo cáo G05](../GD5.md), [feature/split caption-only](../outputs/quality/g05_features_vitied-g05-caption-idf512-v1.json): split giữ nguyên 6.597/1.095/1.422, 8.254 vector và 860 abstain; [train DL4J caption-only](../outputs/quality/g05_train_vitied-g05-captiononly-ae64-live-20261016.json), [console driver + hai worker](../outputs/quality/g05_train_vitied-g05-captiononly-ae64-live-20261016.console.txt), [so sánh DL4J/SVD](../outputs/quality/g05_evaluation_vitied-g05-captiononly-ae64-live-20261016.json). 3 vòng, 47 batch/worker/vòng; validation MSE 0,002241 → 0,001661, test MSE 0,001655. | [80 Post mẫu](../data/labels/vitied_g05_review_mixed.csv) chưa được duyệt; DL4J test MSE kém SVD (0,001321), ARI giữa seed 0,982 và silhouette validation 0,078 chỉ dùng cohort để rà soát; [artifact caption-only](../outputs/quality/g05_model_dashboard_vitied-g05-captiononly-ae64-live-20261016.json), không gán Topic. Chưa có taxonomy/nhãn Post cho classifier/Topic active. |
+| G06 | `done` cho dữ liệu có bằng chứng | [Báo cáo G06](../GD6.md), [manifest](../outputs/quality/g06_gold_vitied-gold-v1-20261014.json), [HDFS fsck](../outputs/quality/g06_hdfs_fsck.txt): Spark `app-20261014161609-0003`, task trên hai worker, 9.114 Post = tổng `post_period`, 34.750 Observation, 29.075 hashtag-period, 108.064 cặp hashtag; Parquet read-back khớp, Post ID/cạnh Post–Hashtag khớp graph, HDFS fsck HEALTHY, replication 2 | Topic tables có schema nhưng 0 dòng đến khi nhãn Post được duyệt; Sound tables không có dữ liệu đến khi có Sound ID xác thực. G05 vẫn chờ rà soát nhãn. |
+| G07 | `in_progress` | Dashboard dùng Neo4j duy nhất. [40 API/data và UI checks](../outputs/quality/g07_web_dashboard.json) đạt; sidebar sáu mục; mạng hashtag toàn cục gồm 10.549 node, 62.067 cặp ứng viên, 3.451 cạnh được chấm. Hashtag phủ trên 5% Post được loại khỏi link scoring; toàn kỳ ArticleRank dẫn đầu #skincare, Closeness Centrality dẫn đầu #skincare; #xuhuong (1.571/9.114 Post) không tham gia chấm cạnh. Các báo cáo khác gồm thay đổi thị phần caption, creator breadth, kịch bản 4 tuần và like/view snapshot. Damped trend MAE 3,06 điểm %, baseline MAE 2,91 điểm %, nên UI dùng baseline. | Docker image đã rebuild; cần xem trực quan desktop/màn hẹp; CUA không có browser surface. Nguồn kết thúc 02/07/2025 nên phép chiếu hồi cứu; nhãn Topic vẫn chờ người duyệt. PostgreSQL đã dừng. |
+| G08 | `not_started` | Chưa đưa ViTIED vào NiFi/Kafka | Replay giữ timestamp nguồn, checkpoint/restart/idempotent sink nếu chọn nhánh streaming |
+| G09 | `not_started` | Chưa có chạy end-to-end ViTIED | Bằng chứng từng tầng, benchmark tương đương output và giới hạn topology |
 
-## Tiếp theo
+## Kiểm kê nguồn đã chạy
 
-Đối soát `kol.csv` khi có danh sách đầu vào, rồi triển khai G02 và kiểm chứng HDFS/Spark thực tế. G01 chỉ đánh dấu `done` khi danh sách KOL, manifest và mapping được đối soát đầy đủ.
+- `python scripts/audit_vitied.py` và `python scripts/intake_vitied.py`: hai CSV 34.750 dòng = 34.750 accepted observation + 0 quarantine; 9.114 Post canonical từ URL TikTok hợp lệ, gồm 8.731 video và 383 photo; 384 username. Không có ánh xạ ID một-nhiều, trùng/xung đột Post × `observed_at` hoặc xung đột phút đăng.
+- Toàn bộ 5.114 dòng streaming có raw `vid_id` lệch ID URL 257–312 đơn vị; ID URL được chọn làm canonical, raw ID được giữ trong bảng đối chiếu. Music ID ký pháp khoa học không được khôi phục. 1.829 bài khác giây đăng giữa snapshot nhưng cùng phút; canonical thời gian đăng có độ phân giải phút. `vid_nshare='Share'` có 848 dòng và là missing, không phải 0.
+- `topic` không đổi trong từng username có giá trị (`0/371` author training và `0/347` streaming đổi). Sáu giá trị casefolded được dùng làm `creator_category` nguồn; 520 dòng unknown. Không làm ground truth Topic bài.
+- `python -m unittest discover -s tests -p test_vitied_*.py -v`: 4 test G01 đạt; trường hợp ID không nhất quán, URL ngoài TikTok và trùng/xung đột observation được đưa vào quarantine trong fixture.
+
+## G03 đã chạy
+
+- `python scripts/upload_vitied_bronze.py`: HDFS Bronze `/trend/vitied/bronze/vitied-20261013-370234d0358b/`, hai file đọc lại khớp SHA-256 trong manifest. `python scripts/verify_g03_hdfs.py`: Bronze 2 block và Silver active 12 block, 3 DataNode, replication trung bình 2, không thiếu block.
+- `jobs/spark/03_vitied_silver.py` trên Spark Standalone, app `app-20261013163900-0005`, task chuẩn hóa trên `spark-worker-1` và `spark-worker-2`: training 29.636 + streaming 5.114 = 34.750 Observation, 9.114 Post (8.731 video/383 photo), 40.624 cặp Post–Hashtag, 402 cặp username–creator category. Duplicate, conflict, quarantine đều 0 ở nguồn hiện tại. `v1/v2` là output chạy thử; release active là `vitied-silver-v3`.
+- `jobs/spark/03_verify_vitied_silver.py`: 0 Post thiếu/thừa so với bảng ID G01, 0 khóa Observation thiếu/thừa so với Python stdlib CSV; 848 placeholder `Share` được lưu null. Toàn bộ 34.750 `music_id` chưa đạt ID nguyên chính xác; giữ raw và `sound_id=null`. Hai test adapter G03 chạy bằng `spark-submit --master local[1]` đạt.
+
+## G04 đã chạy
+
+- `jobs/spark/04_export_vitied_graph.py` đọc release Silver active qua HDFS, tạo JSONL graph qua staging và SHA-256 từng part. Spark app `app-20261014082429-0001` có task trên cả hai worker; count xuất/đọc lại: 9.114 Post, 10.549 Hashtag, 40.624 cặp Post–Hashtag, 0 Sound/USES_SOUND.
+- `python graph/load_vitied.py --export outputs/g04/vitied-20261013-370234d0358b` kiểm tra checksum/grain/foreign key, tạo 4 uniqueness constraint rồi nạp Neo4j theo batch. Lần nạp lại cho cùng count; projection Post–Hashtag có 1.571 component, lớn nhất 7.286 Post, 1.176 Post không có hashtag. Ba unit test graph đạt; `py_compile` hai script đạt.
+
+## Việc tiếp theo
+
+M1 (G01–G03) và G04 cho quan hệ có bằng chứng đã đạt trên hai CSV hiện tại. G05 đã xuất feature từ Spark và huấn luyện DL4J trên hai JVM worker; split theo Post/author/caption trùng, IDF train-only. Docker có khoảng 7,57 GiB RAM; JVM train dùng heap 512 MiB/worker và native CPU backend, không tăng giới hạn container. Nhãn Topic cấp bài vẫn cần rà soát trước supervised. Sound chỉ khi có ID xác thực, không suy ra từ tên/ký pháp khoa học.
+
+G05 đã chạy CPU thực với 512 MiB JVM/worker trong container worker 1.280 MiB; hai worker xử lý 3.176/3.175 Post mỗi vòng, tham số hai phía đều thay đổi. Run v2 ba vòng: validation MSE 0,001728, test 0,001734; run nối tiếp v3 tám vòng: validation 0,001578, test 0,001565. Baseline SVD test 0,001425; chọn v2 **chỉ để rà soát cụm** theo ARI/silhouette validation (0,967/0,053) so với SVD (0,788/0,036) và v3 (0,832/0,027). Một worker 53,4 giây, hai worker 73,5 giây cho ba vòng cùng dữ liệu; không có speedup. G05 vẫn `in_progress` do chưa có đánh giá người duyệt/nhãn Topic cấp Post; không ghi cluster thành Topic vào Neo4j.
+
+Audit đầu vào G05 đọc UTF-8 hai CSV raw, khóa Post từ URL đã kiểm tra như G01, xếp Observation theo `vid_scrapeTime` rồi `source_file`/dòng: 9.114 Post; 780 Post không có caption ở mọi snapshot, 1.176 không có hashtag ở mọi snapshot, 324 thiếu cả hai ở mọi snapshot. Có 2.802 Post với nhiều caption không rỗng khác nhau, nên feature phải có quy tắc snapshot rõ ràng. Ở snapshot đầu: 781 thiếu caption, 1.179 thiếu hashtag, 325 thiếu cả hai. Con số này là kiểm tra raw cho kế hoạch feature, chưa phải feature release đã xuất từ Silver và chưa phải mẫu train hợp lệ cuối cùng.

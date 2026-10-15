@@ -1,0 +1,14 @@
+{
+  "silver": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+  "post_missing_vs_g01": 0,
+  "post_extra_vs_g01": 0,
+  "observation_key_missing_vs_local": 0,
+  "observation_key_extra_vs_local": 0,
+  "media_type_posts": {
+    "photo": 383,
+    "video": 8731
+  },
+  "share_placeholder_as_null": 848,
+  "unresolved_sound_observations": 34750,
+  "passed": true
+}

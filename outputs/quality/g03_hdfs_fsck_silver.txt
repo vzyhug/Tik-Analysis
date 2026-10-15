@@ -1,0 +1,93 @@
+FSCK started by hadoop (auth:SIMPLE) from /172.18.0.6 for path /trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b at Wed Oct 14 08:15:51 UTC 2026
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/creator_categories <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/creator_categories/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/creator_categories/part-00000-e4cc9645-a472-4eaf-bd94-15c75be11f5c-c000.snappy.parquet 6676 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741941_1117 len=6676 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00000-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 802069 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741932_1108 len=802069 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00001-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 770053 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741933_1109 len=770053 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00002-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 781673 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741934_1110 len=781673 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00003-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 783615 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741935_1111 len=783615 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00004-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 777533 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741936_1112 len=777533 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00005-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 797389 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741937_1113 len=797389 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00006-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 794807 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741938_1114 len=794807 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/observations/part-00007-7fa08ab7-4a4d-4cbe-b7cd-ecfaf875ca77-c000.snappy.parquet 789246 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741939_1115 len=789246 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/post_hashtags <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/post_hashtags/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/post_hashtags/part-00000-4f85d9f5-9fdb-4250-947c-d7f803ae67df-c000.snappy.parquet 370430 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741940_1116 len=370430 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/posts <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/posts/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/posts/part-00000-c8435d93-2f14-404f-a350-25dcd1cddc5a-c000.snappy.parquet 216515 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741931_1107 len=216515 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK]]
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/quarantine <dir>
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/quarantine/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b/quarantine/part-00000-acd06f0f-5f6c-4e4b-b41a-8fa1a5c40748-c000.snappy.parquet 675 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741942_1118 len=675 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	3
+ Number of racks:		1
+ Total dirs:			6
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	6890681 B
+ Total files:	17
+ Total blocks (validated):	12 (avg. block size 574223 B)
+ Minimally replicated blocks:	12 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	2
+ Average block replication:	2.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Wed Oct 14 08:15:51 UTC 2026 in 11 milliseconds
+
+
+The filesystem under path '/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b' is HEALTHY

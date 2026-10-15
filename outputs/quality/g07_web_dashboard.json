@@ -1,0 +1,190 @@
+{
+  "generated_at_utc": "2026-10-15T19:31:55.195813+00:00",
+  "graph_version": "vitied-g04-v2",
+  "base_url": "http://127.0.0.1:8787",
+  "checks": [
+    {
+      "name": "Health endpoint confirms Neo4j graph source",
+      "passed": true
+    },
+    {
+      "name": "Live Neo4j Post/Observation nodes reconcile to graph load",
+      "passed": true
+    },
+    {
+      "name": "Graph metadata endpoint identifies active version",
+      "passed": true
+    },
+    {
+      "name": "API responses are not cached",
+      "passed": true
+    },
+    {
+      "name": "Neo4j dashboard query (all, 2022-12-06..2025-07-02)",
+      "passed": true
+    },
+    {
+      "name": "Neo4j dashboard query (video, 2022-12-06..2025-07-02)",
+      "passed": true
+    },
+    {
+      "name": "Neo4j dashboard query (photo, 2022-12-06..2025-07-02)",
+      "passed": true
+    },
+    {
+      "name": "All-media cohort reconciles to unique graph Posts",
+      "passed": true
+    },
+    {
+      "name": "Observation timeline reconciles to graph",
+      "passed": true
+    },
+    {
+      "name": "Video/photo filters reconcile to G01",
+      "passed": true
+    },
+    {
+      "name": "Weekly content timeline reconciles to graph Post count",
+      "passed": true
+    },
+    {
+      "name": "Media-by-week report reconciles to cohort",
+      "passed": true
+    },
+    {
+      "name": "Snapshot chart reconciles to observation count",
+      "passed": true
+    },
+    {
+      "name": "Latest observation metrics have one row per observed Post",
+      "passed": true
+    },
+    {
+      "name": "Caption-only DL4J cohort assignments reconcile",
+      "passed": true
+    },
+    {
+      "name": "Dashboard returns cluster performance and bounded creator comparison",
+      "passed": true
+    },
+    {
+      "name": "Cluster like/view rates are valid proportions",
+      "passed": true
+    },
+    {
+      "name": "Four-week caption-cluster share projection is available",
+      "passed": true
+    },
+    {
+      "name": "Forecast cluster shares plus unassigned cohort sum to one",
+      "passed": true
+    },
+    {
+      "name": "Forecast method has at least three chronological backtest windows",
+      "passed": true
+    },
+    {
+      "name": "Dashboard serves the backtest winner instead of an unvalidated trend model",
+      "passed": true
+    },
+    {
+      "name": "Forecast output discloses cluster-fit leakage limitation",
+      "passed": true
+    },
+    {
+      "name": "Trend projection discloses source end and has at least 12 consecutive weeks",
+      "passed": true
+    },
+    {
+      "name": "Global hashtag network covers the graph population",
+      "passed": true
+    },
+    {
+      "name": "Link analysis bounds the visible network and suppresses weak/common pairs",
+      "passed": true
+    },
+    {
+      "name": "Displayed links pass support, creator, and positive-weight rules",
+      "passed": true
+    },
+    {
+      "name": "Closeness ranking uses the same full graph population",
+      "passed": true
+    },
+    {
+      "name": "Neo4j dashboard query (all, 2025-07-02..2025-07-02)",
+      "passed": true
+    },
+    {
+      "name": "Published-date cohort and observation-date timeline remain distinct",
+      "passed": true
+    },
+    {
+      "name": "Reversed date range is rejected",
+      "passed": true
+    },
+    {
+      "name": "Caption-only DL4J analysis artifact is served",
+      "passed": true
+    },
+    {
+      "name": "DL4J dashboard uses caption-only features and filtered caption descriptors",
+      "passed": true
+    },
+    {
+      "name": "Customer dashboard has sidebar navigation to six dedicated report views",
+      "passed": true
+    },
+    {
+      "name": "Report sections separate momentum, projection, engagement, and group comparison",
+      "passed": true
+    },
+    {
+      "name": "Network report ranks the global hashtag graph with ArticleRank and closeness centrality scores",
+      "passed": true
+    },
+    {
+      "name": "Vietnamese-first typography and larger report hierarchy are served",
+      "passed": true
+    },
+    {
+      "name": "Customer UI hides media-type controls and raw post identifiers",
+      "passed": true
+    },
+    {
+      "name": "Customer UI hides model diagnostics and machine cluster identifiers",
+      "passed": true
+    },
+    {
+      "name": "Customer reports use concise reporting language without defensive caveats",
+      "passed": true
+    },
+    {
+      "name": "Customer UI avoids database labels and hashtag popularity reports",
+      "passed": true
+    }
+  ],
+  "api_results": {
+    "posts": 9114,
+    "observations": 34750,
+    "video_posts": 8731,
+    "photo_posts": 383,
+    "clusters": 8,
+    "creators": 12,
+    "weekly_periods": 95,
+    "observation_days": 10,
+    "hashtags": 10549,
+    "candidate_pairs": 62067,
+    "scored_pairs": 3451,
+    "generic_tags_suppressed": 3,
+    "suppressed_pairs": 58616,
+    "articlerank_leader": "skincare",
+    "closeness_leader": "skincare",
+    "date_range": {
+      "from": "2022-12-06",
+      "to": "2025-07-02"
+    }
+  },
+  "passed": true,
+  "visual_browser_review": "not performed"
+}

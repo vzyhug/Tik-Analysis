@@ -1,0 +1,48 @@
+FSCK started by hadoop (auth:SIMPLE) from /172.18.0.6 for path /trend/vitied/bronze/vitied-20261013-370234d0358b at Wed Oct 14 08:15:41 UTC 2026
+
+/trend/vitied/bronze/vitied-20261013-370234d0358b <dir>
+/trend/vitied/bronze/vitied-20261013-370234d0358b/streaming_data.csv 1944254 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741906_1082 len=1944254 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/vitied/bronze/vitied-20261013-370234d0358b/training_data.csv 16189863 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741905_1081 len=16189863 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.10:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.9:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	3
+ Number of racks:		1
+ Total dirs:			1
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	18134117 B
+ Total files:	2
+ Total blocks (validated):	2 (avg. block size 9067058 B)
+ Minimally replicated blocks:	2 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	2
+ Average block replication:	2.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Wed Oct 14 08:15:41 UTC 2026 in 29 milliseconds
+
+
+The filesystem under path '/trend/vitied/bronze/vitied-20261013-370234d0358b' is HEALTHY

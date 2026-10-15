@@ -1,0 +1,72 @@
+FSCK started by hadoop (auth:SIMPLE) from /172.18.0.5 for path /trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318 at Tue Oct 13 10:27:07 UTC 2026
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318 <dir>
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check <dir>
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check/part-00000-fb86c4a4-d9c2-44c2-ac2c-0a684f477a20-c000.snappy.parquet 495 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741902_1078 len=495 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.2:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check/part-00003-fb86c4a4-d9c2-44c2-ac2c-0a684f477a20-c000.snappy.parquet 1573 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741903_1079 len=1573 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.2:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-byte-check/part-00007-fb86c4a4-d9c2-44c2-ac2c-0a684f477a20-c000.snappy.parquet 1580 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741904_1080 len=1580 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check <dir>
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check/_SUCCESS 0 bytes, replicated: replication=2, 0 block(s):  OK
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check/part-00000-fbea5e23-8b87-49a8-bca4-14c1dff44935-c000.snappy.parquet 407 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741899_1075 len=407 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.2:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check/part-00003-fbea5e23-8b87-49a8-bca4-14c1dff44935-c000.snappy.parquet 881 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741900_1076 len=881 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/spark-check/part-00007-fbea5e23-8b87-49a8-bca4-14c1dff44935-c000.snappy.parquet 889 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741901_1077 len=889 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.2:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/streaming_data.csv 1944254 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741898_1074 len=1944254 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-6423cf3e-8024-4baf-a09e-3d545c1dc5a6,DISK]]
+
+/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/training_data.csv 16189863 bytes, replicated: replication=2, 1 block(s):  OK
+0. BP-1088170305-172.18.0.3-1791735156971:blk_1073741897_1073 len=16189863 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-4ea3457e-6d0b-481b-a948-adc35dba48db,DISK], DatanodeInfoWithStorage[172.18.0.2:9866,DS-c20915f5-4537-475d-8851-e2615e45d1e4,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	3
+ Number of racks:		1
+ Total dirs:			3
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	18139942 B
+ Total files:	10
+ Total blocks (validated):	8 (avg. block size 2267492 B)
+ Minimally replicated blocks:	8 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	2
+ Average block replication:	2.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Tue Oct 13 10:27:07 UTC 2026 in 63 milliseconds
+
+
+The filesystem under path '/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318' is HEALTHY

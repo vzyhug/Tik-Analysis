@@ -1,0 +1,7 @@
+{
+  "alternate_sign": false,
+  "method": "HashingVectorizer + train-only TfidfTransformer",
+  "n_features": 512,
+  "normalization": "L2",
+  "token_pattern": "(?u)\\b\\w+\\b"
+}

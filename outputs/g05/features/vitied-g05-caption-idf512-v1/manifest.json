@@ -1,0 +1,42 @@
+{
+  "feature_version": "vitied-g05-caption-idf512-v1",
+  "feature_mode": "caption_only",
+  "source_feature_version": "vitied-g05-content-v1",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "source_posts": 9114,
+  "split_seed": "vitied-author-split-v1",
+  "split_counts": {
+    "test": 1422,
+    "train": 6597,
+    "validation": 1095
+  },
+  "usable_counts": {
+    "train": 5947,
+    "validation": 1023,
+    "test": 1284
+  },
+  "author_group_count": 381,
+  "abstain_count": 860,
+  "source_empty_count": 781,
+  "vector_empty_count": 79,
+  "author_counts": {
+    "train": 276,
+    "validation": 48,
+    "test": 60
+  },
+  "input_dimension": 512,
+  "normalization": "hashing 512 + IDF fitted on train only, L2",
+  "content_policy": "earliest observed snapshot caption only",
+  "created_at_utc": "2026-10-15T17:53:44.980485+00:00",
+  "checksums": {
+    "train.tsv": "48452d5930895d6b8ddb61caa353a9fe7c98adba2c820b3a6b180c02c73b8d58",
+    "validation.tsv": "3d9566cc079b0058ee79094a3716cea509813d32e78b3e6714c11fa79c203518",
+    "test.tsv": "02f18203b4a8203c045898dec4cbaf79f06494cff5351d742de92d3f0628685b",
+    "train_worker_1.tsv": "9d83f80df76035be82927776a4a2daeafb2be485fb0dd1af70da741beb3b12de",
+    "train_worker_2.tsv": "e84a810ba6e4c9b242c23e941713b7d874b30d8b8d642b6693e2d122e7ebb378",
+    "split_manifest.jsonl": "ca8a6db911bce22867f9e1daa97fdded6e6899cef2320e79f17c58f906bb9f3b",
+    "tfidf.joblib": "3c051852f3061ec67b66beb9babf90d35bce8383a04d63fd59e22a57cbef618b",
+    "feature_contract.json": "dc176a5b0cb09c7171b8291af49559f3b5c2b7a33b619c5598f25051a4bd2935"
+  },
+  "passed": true
+}

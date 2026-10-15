@@ -1,0 +1,56 @@
+{
+  "feature_version": "vitied-g05-hashidf512-v3",
+  "same_training_posts": 6351,
+  "rounds": 3,
+  "batch_size": 64,
+  "single_worker_seconds": 53.405794499994954,
+  "two_worker_seconds": 73.49515860000974,
+  "single_worker_last_validation_mse": 0.0016906825111848171,
+  "two_worker_last_validation_mse": 0.0017282755088026279,
+  "history": [
+    {
+      "round": 1,
+      "worker": {
+        "samples": 6351,
+        "batches": 100,
+        "host": "spark-worker-1",
+        "parameter_delta_l2": 7.677757263183594
+      },
+      "validation": {
+        "samples": 1070,
+        "mse": 0.0018262649738342962,
+        "zero_mse": 0.001953125299415856
+      }
+    },
+    {
+      "round": 2,
+      "worker": {
+        "samples": 6351,
+        "batches": 100,
+        "host": "spark-worker-1",
+        "parameter_delta_l2": 11.75523567199707
+      },
+      "validation": {
+        "samples": 1070,
+        "mse": 0.0017381635085444583,
+        "zero_mse": 0.001953125299415856
+      }
+    },
+    {
+      "round": 3,
+      "worker": {
+        "samples": 6351,
+        "batches": 100,
+        "host": "spark-worker-1",
+        "parameter_delta_l2": 12.158524513244629
+      },
+      "validation": {
+        "samples": 1070,
+        "mse": 0.0016906825111848171,
+        "zero_mse": 0.001953125299415856
+      }
+    }
+  ],
+  "scope": "same feature release and rounds; 1 CPU worker vs 2 CPU workers, warm containers/cache",
+  "passed": true
+}

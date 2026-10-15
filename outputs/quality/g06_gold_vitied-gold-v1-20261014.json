@@ -1,0 +1,67 @@
+{
+  "dataset_id": "vitied",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "publication_id": "vitied-gold-v1-20261014",
+  "gold_schema_version": "vitied-gold-v1",
+  "silver_path": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+  "silver_schema_version": "vitied-silver-v3",
+  "graph_version": "vitied-g04-v1",
+  "graph_export_counts": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "post_hashtags": 40624,
+    "sounds": 0,
+    "post_sounds": 0
+  },
+  "published_at_utc": "2026-10-14T16:17:05.773120+00:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "spark_application_id": "app-20261014161609-0003",
+  "master": "spark://spark-master:7077",
+  "task_hosts": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "table_grain": {
+    "post_period": "local published date x media_type; distinct Post",
+    "hashtag_period": "local published date x hashtag from earliest observation; distinct Post",
+    "hashtag_pair_period": "local published date x unordered hashtag pair from earliest observation; distinct Post",
+    "engagement_observation": "Post x observed_at_utc snapshot",
+    "coverage": "local published date x media_type; distinct Post coverage and snapshot count",
+    "topic_period": "published date x reviewed Post Topic; empty until manual labels are approved",
+    "topic_hashtag": "published date x reviewed Post Topic x hashtag; empty until labels are approved",
+    "topic_sound": "published date x reviewed Post Topic x verified Sound ID; empty for current source"
+  },
+  "tables": {
+    "post_period": 613,
+    "topic_period": 0,
+    "hashtag_period": 29075,
+    "hashtag_pair_period": 108064,
+    "topic_hashtag": 0,
+    "topic_sound": 0,
+    "engagement_observation": 34750,
+    "coverage": 613
+  },
+  "readback": {
+    "post_period": 613,
+    "topic_period": 0,
+    "hashtag_period": 29075,
+    "hashtag_pair_period": 108064,
+    "topic_hashtag": 0,
+    "topic_sound": 0,
+    "engagement_observation": 34750,
+    "coverage": 613
+  },
+  "topic_label_rows": 0,
+  "topic_label_status": "unavailable_no_reviewed_post_labels",
+  "sound_status": "unavailable_no_verified_sound_ids",
+  "reconciliation": {
+    "silver_posts": 9114,
+    "post_period_distinct_sum": 9114,
+    "silver_observations": 34750,
+    "graph_posts": 9114,
+    "graph_post_hashtags": 40624,
+    "silver_graph_post_ids_equal": true,
+    "silver_graph_post_hashtag_edges_equal": true
+  },
+  "passed": true
+}

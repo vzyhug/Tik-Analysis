@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-13T10:27:10.910076+00:00",
+  "mode": "restart_readback",
+  "hdfs_directory": "/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318",
+  "files": [
+    {
+      "source_file": "training_data.csv",
+      "bytes": 16189863,
+      "expected_sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "hdfs_sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "match": true,
+      "hdfs_path": "/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/training_data.csv"
+    },
+    {
+      "source_file": "streaming_data.csv",
+      "bytes": 1944254,
+      "expected_sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "hdfs_sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "match": true,
+      "hdfs_path": "/trend/diagnostics/vitied-g02/20261013T101756Z-04ef3318/streaming_data.csv"
+    }
+  ],
+  "fsck_status_healthy": true,
+  "fsck_replication_values": [
+    2
+  ],
+  "fsck_block_count": 8,
+  "live_datanodes": 3,
+  "fsck_details": "outputs/quality/g02_hdfs_fsck.txt",
+  "passed": true
+}

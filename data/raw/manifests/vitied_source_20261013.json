@@ -1,0 +1,25 @@
+{
+  "dataset": "ViTIED",
+  "source_repository": "https://github.com/dthn-anna/ViTIED",
+  "upstream_head_observed": "ca9ab5c4a90a7fc51afdc2c73a9b66c3d0a83aac",
+  "upstream_ref_downloaded": "refs/heads/main",
+  "note": "HEAD was observed separately from download; file SHA-256 values identify the actual audited bytes. Raw source files are ignored by Git.",
+  "files": [
+    {
+      "source_url": "https://raw.githubusercontent.com/dthn-anna/ViTIED/refs/heads/main/Dataset/training_data.csv",
+      "local_path": "data/raw/vitied/training_data.csv",
+      "bytes": 16189863,
+      "sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "rows": 29636
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/dthn-anna/ViTIED/refs/heads/main/Dataset/streaming_data.csv",
+      "local_path": "data/raw/vitied/streaming_data.csv",
+      "bytes": 1944254,
+      "sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "rows": 5114
+    }
+  ],
+  "audit_report": "outputs/quality/vitied_source_audit.json",
+  "status": "source_audited_only"
+}

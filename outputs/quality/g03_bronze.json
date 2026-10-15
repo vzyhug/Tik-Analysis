@@ -1,0 +1,21 @@
+{
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "hdfs_directory": "/trend/vitied/bronze/vitied-20261013-370234d0358b",
+  "files": [
+    {
+      "file": "training_data.csv",
+      "hdfs_path": "/trend/vitied/bronze/vitied-20261013-370234d0358b/training_data.csv",
+      "bytes": 16189863,
+      "sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "already_present": true
+    },
+    {
+      "file": "streaming_data.csv",
+      "hdfs_path": "/trend/vitied/bronze/vitied-20261013-370234d0358b/streaming_data.csv",
+      "bytes": 1944254,
+      "sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "already_present": true
+    }
+  ],
+  "passed": true
+}

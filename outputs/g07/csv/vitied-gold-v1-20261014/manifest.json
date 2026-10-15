@@ -1,0 +1,58 @@
+{
+  "dataset_id": "vitied",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "publication_id": "vitied-gold-v1-20261014",
+  "gold_schema_version": "vitied-gold-v1",
+  "gold_path": "/trend/vitied/gold/vitied-gold-v1-20261014",
+  "exported_at_utc": "2026-10-14T16:27:01.233064+00:00",
+  "format": "headerless CSV UTF-8, backslash-N null marker",
+  "tables": {
+    "post_period": 613,
+    "topic_period": 0,
+    "hashtag_period": 29075,
+    "hashtag_pair_period": 108064,
+    "topic_hashtag": 0,
+    "topic_sound": 0,
+    "engagement_observation": 34750,
+    "coverage": 613
+  },
+  "readback": {
+    "post_period": 613,
+    "topic_period": 0,
+    "hashtag_period": 29075,
+    "hashtag_pair_period": 108064,
+    "topic_hashtag": 0,
+    "topic_sound": 0,
+    "engagement_observation": 34750,
+    "coverage": 613
+  },
+  "checksums": {
+    "post_period": {
+      "part-00000-944f055e-dd8e-4679-ba13-90e494364299-c000.csv": "e9dc8aac182897504b605c15e20eead14856c4ec81e1f506b746be59ea0988d8"
+    },
+    "topic_period": {},
+    "hashtag_period": {
+      "part-00000-a9e8aaf4-cf40-4ea4-8e53-00e2c5061fb8-c000.csv": "10acb6e33c81d7ef97658dbee3cb7b05dff51087eed669c0b74ceaff67854141"
+    },
+    "hashtag_pair_period": {
+      "part-00000-993f10da-942e-403d-9112-77865d709c94-c000.csv": "c35af6d9f7b5c37d8d9bf5ea2ed258c62c075c58bab4c2660a080bf4c2f82bc4",
+      "part-00001-993f10da-942e-403d-9112-77865d709c94-c000.csv": "580bbfa5288de34bc1d06d87a835493af3bd03331d8bad5e7c72cce462e5f84d"
+    },
+    "topic_hashtag": {},
+    "topic_sound": {},
+    "engagement_observation": {
+      "part-00000-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "ca800c529ab006d18df72df77990ac4452d6efd41a24d05031c2e14759c96d54",
+      "part-00001-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "9f35579abc51a8568426077db16e72e58e9bc3c6e264262b9e19ce6cc6681780",
+      "part-00002-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "1d17966d55af3f74e4fd3879e81d29cfa099a0784c61f511b77edf84eed3d056",
+      "part-00003-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "8f368443a850b37bc873186170429db3972bbe496a2deea5406143474d079d81",
+      "part-00004-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "0f937ba06b78a16062a235694a98693435e63dba513fc1a7ffc26f9d404c8320",
+      "part-00005-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "29b6df6827ba89f1cd1ed8b16495db94ea451f757615e9be3663053860154ccb",
+      "part-00006-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "34127f185ad797e368e354af52142926db0f98d833e4d445977404fdfb3cb120",
+      "part-00007-98d5cc6b-4717-464f-a8e6-291dcb40c78f-c000.csv": "c5124a3f31d49569529a4fbc96a0de78e0724ffde145b995b0c6dbcae09759d6"
+    },
+    "coverage": {
+      "part-00000-5a99c62a-9882-47c0-94da-91f0874d753d-c000.csv": "76b0105e4de2a6c148bd38b71c2360a867a36f1ca39f4c5a6521eb9279b12c59"
+    }
+  },
+  "passed": true
+}

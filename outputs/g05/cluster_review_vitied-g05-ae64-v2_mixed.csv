@@ -1,0 +1,81 @@
+﻿cluster,sample_type,post_id,distance,caption_first_snapshot,hashtags_first_snapshot,source_file,source_row
+0,centroid,7517192118658469138,0.2706982493400574,mê ly lun ah nha ??,"lovelycc,fyp",training_data.csv,22890
+0,centroid,7515863414778924306,0.27688509225845337,🐥,"viral,outfit,vayxinh,foryou,40kgoutfit",streaming_data.csv,329
+0,centroid,7519479746296696082,0.290499210357666,,"bycamcam,cunoilacun,outfit",training_data.csv,28866
+0,centroid,7476015402527558920,0.29366686940193176,Check outfit nÃ ooo ð,,training_data.csv,3266
+0,centroid,7518051205579279623,0.29794085025787354,Healing dayyy ð¥°ð¥°,nangmo,training_data.csv,25342
+0,random,7518626265520262407,0.4495513141155243,Chá» lÃ  1 chiáº¿c tÃºi xink thui ð³,"maysosam,chio2nd",training_data.csv,26674
+0,random,7515405309716843784,0.3853510916233063,,"cunoilacun,outfit,basic",training_data.csv,19230
+0,random,7517514651387710727,0.45232918858528137,Äi biá»n thuiiii,"dqlootd,dinhquynhlan,ootd,tryon,dibienmacgi,outfitideas,muahemacgi",training_data.csv,23626
+0,random,7493541100133584135,0.565956175327301,Xinh yÃªu ððð,"fyp,xuhuong,aodaiforher,aodai,aodaidep",training_data.csv,4934
+0,random,7515317332210633992,0.34373965859413147,NgÃ y 56/100 ngÃ y lÃ m máº«u áº£nh bikini ðð»ðð¼,"100ngaylammaubikini,dec1m49,drogiderm",training_data.csv,19002
+1,centroid,7516392066918780167,0.2607666254043579,Ðem h?n u?c g?i vào dôi nh?n nh? ??,"nhanhenuoc,klynh,viral",training_data.csv,20926
+1,centroid,7505313797003906324,0.27888065576553345,ki?p n?n t?i r?iii - m?y chú said?????????,"foxiereview,beautybyfoxie",training_data.csv,8606
+1,centroid,7508397048543284487,0.2846495807170868,"xinh quá àaa, fomo li?n k thôi t gi?n luônnn ??","inga,kbeauty,glowbesties,bangmat,phanmat,makeuptutorial,makeup,viraltiktok",training_data.csv,10530
+1,centroid,7516389321499348232,0.29194897413253784,"Nh?ng di?u nh? nh?t ""phá hu?"" mái tóc b?n P2.","hairstyle,trick,tócnamd?p,sápital,lamdep",training_data.csv,20918
+1,centroid,7512388540681030920,0.292737752199173,M?y con gà dâu h?t r?i :))),"boxbilliards,boxstudio",training_data.csv,14458
+1,random,7519422121743879444,0.31482306122779846,Skincare bu?i sáng cho nam gi?i.,"milo,goclamdep,skincare,skincareroutine",training_data.csv,28734
+1,random,7498339239038438664,0.3309103548526764,Chua t?ng khen em ch?m m?n nào nhung Biotrade là ngo?i l? ????,"nganhuane,thuhaifreeship,vanchuyenmienphi,biotrade",training_data.csv,6126
+1,random,7515025615343373576,0.4550742208957672,Công d?ng tuy?t v?i khi b?n u?ng nu?c lá tía tô nh? xem h?t clip c?a linh nha #,"hoanglinh,d?pda,xuhuong",training_data.csv,18458
+1,random,7517502654638050567,0.42226946353912354,Da tr?ng nhu trai hàn thì dùng m? ph?m chu?n Hàn anh em này da t?t s?m thì dùng e này dúng h?t ch? chê sáng sa d?u da m?n t?t r?t dáng dùng dó nhé,"xuhuong,xh,vbtun05ne,drforskin,serumduongdadabo,daboblackforce,duongdachonam",training_data.csv,23562
+1,random,7517190251832560897,0.34010398387908936,H?i h?n vì dã ko tin Xoài Non s?m hon,"tr?ngda,bi?n_hình,vienuongtrangda,review,yowhite80,fyp,tiktokviral,xuhu?ng,xh,viral,da,xhtiktok,dabody,damat",training_data.csv,22886
+2,centroid,7517507823652146439,0.20818865299224854,Trả lời,"teoemthonha,kocnet,loilocnuoc",training_data.csv,23582
+2,centroid,7518746050820148498,0.21120987832546234,Trả lời,"daugoitrigau,daugoisachgau,lemond",training_data.csv,27102
+2,centroid,7518321467101138184,0.22115960717201233,Trả lời,"loctomo,loctomo9,loabluetooth,loabluetoothmini",training_data.csv,25894
+2,centroid,7518375710340271368,0.22115960717201233,Trả lời,"loctomo,loctomo9,loabluetooth,loabluetoothmini",training_data.csv,26194
+2,centroid,7518702734204357896,0.22115960717201233,Trả lời,"loctomo,loctomo9,loabluetooth,loabluetoothmini",training_data.csv,26934
+2,random,7513918295934782738,0.3177545368671417,Trả lời,"thetrinh,loa,loabluetooth",training_data.csv,16590
+2,random,7518001359011007762,0.27402475476264954,Trả lời,"teoemthonha,kocnet,learnontiktok,game",training_data.csv,25126
+2,random,7513507966612425991,0.30880460143089294,Trả lời,"thetrinh,robot,loa,loabluetooth",training_data.csv,16018
+2,random,7511570039816899847,0.35895001888275146,Trả lời,"thetrinh,loabluetooth,loabass,xuhuong",streaming_data.csv,4252
+2,random,7494998001446948114,0.4280890226364136,E nồi đa năng rẻ như đồ chơi trên mang và ngoài đời sẽ như thế nào 😱?,"chiyennoicomdien,yenthichreview,lapnguyen,review,fyp,xuhuong,learnontiktok,reviewanngon",training_data.csv,5234
+3,centroid,7517062981432233234,0.23751354217529297,Một tâm sự thật lòng của người từng dùng máy sấy quần áo. Review bóng sấy quần áo từ  lông cừu nén,"dangminh,vulaci",training_data.csv,22554
+3,centroid,7502680049347284231,0.23823438584804535,có thật sự quan trọng không?,"drleoisolationcream,drleo,bestisolationcream,bestlazycream,naturalmakeuplook,primer",streaming_data.csv,4288
+3,centroid,7506861899615571218,0.24049493670463562,Study |21-05-25|,"study,studytok,vibe,xuhuong",training_data.csv,9374
+3,centroid,7464938645028490503,0.2431696504354477,Cùng trổ tài nấu món ngon ngày Tết cùng nước mắm Thuận Phát nhé,"thuanphat,nuocmamngon",training_data.csv,2722
+3,centroid,7254818060152900870,0.26185664534568787,"Viên uống mùi hoa hồng thơm tự nhiên, khuyên ce nên dùng nhé, rất rất recommend ạ 😘🌹🌹🌹","dhcvietnam,vienhoahongdhc,vienhoahong,goclamdep,skincare",streaming_data.csv,3143
+3,random,7510857787006586119,0.4297034442424774,Set cọ trang điểm siêu xinhh,"huyenmiko,cotrangdiem,maange,makeup,xuhuong",training_data.csv,12706
+3,random,7489719018849324343,0.3198643624782562,Có những ngày chẳng muốn làm gì,"xuhuong,bien",training_data.csv,4354
+3,random,7507633790643129607,0.3952696621417999,Gì chứ cháo nấm nhà VIFON là nhà tui mê lắm luôn,"vifon,chaovifon,thitthat",training_data.csv,10034
+3,random,7507559573876722951,0.48159587383270264,Review tô thuỷ tinh giá rẻ,"dangminh,dangminhreview,vulaci",training_data.csv,9862
+3,random,7517086123450010898,0.420401394367218,✨ nhỏ gọn như quyển sách,"guongmini,guongcute,guonggapxoay360,muataitiktokshop,linhh_han",training_data.csv,22558
+4,centroid,7509351208612564232,0.2188110202550888,Bước ra phố với Di Bao – auto nổi bật.,"xediendibao,dibaovietnam,style",training_data.csv,11282
+4,centroid,7515735508929006856,0.24004824459552765,Răng trắng sáng chỉ trong 2 tuần.,"closeupvn,closeuptrangrang,trangrangthiennhien,hợptáccùngunilever,tàitrợbởiunileverviệtnam,xuhuong,viralvideo",training_data.csv,19734
+4,centroid,7501168803275934983,0.24103796482086182,Tầm quan trọng của kem lót,"drleoisolationcream,drleo,bestisolationcream,bestlazycream,naturalmakeuplook,primer",streaming_data.csv,4843
+4,centroid,7365144153652563218,0.2529054284095764,,"fypã·,girlvietnam,huyenxemxinhne",streaming_data.csv,1697
+4,centroid,7470550484596608263,0.255117803812027,Làm quà tặng sinh nhật hay các dịp lễ đc nè,"cocsucute,cocsu,quatangsinhnhat,quatang,setcocsu,ptahyew,xhtiktok,unboxing,monquaynghia",training_data.csv,2970
+4,random,7477577658570738962,0.37487125396728516,Mỳ vằn thắn trộn Phương Béo,,streaming_data.csv,2846
+4,random,7518262893469633810,0.2609494924545288,Sản phẩm mình để trong giỏ hàng nhé ạ,"mecunmiu06,tất,tấtnam,vớ,vớnam,thoitrang,xuhuongtiktok",training_data.csv,25698
+4,random,7517878452553338119,0.2875705063343048,Tí Nị Quán - Bún Thái - Hủ Tiếu mực topping đầy đặn ở Gò Vấp,"mrcunghe,vtvcab,xuhuong,govap",training_data.csv,24550
+4,random,7498658865483877639,0.4334688186645508,Ê liền liền😎,"carslan,phanphu,makeup,foryou",streaming_data.csv,3455
+4,random,7514242131406392596,0.36391928791999817,16 Pro Max Ultra Mini quá ảo luôn!,,training_data.csv,17094
+5,centroid,7498715020268735752,0.254841148853302,"Flex nhẹ thành quả 1 ngày săn Mega Sale của em nè các bác ơi, quá trời ưu đãi luôn, các bác ghé lẹ Aeon kẻo hết nha 😘","aeonblackfriday,aeonvietnam,aeon,aeonsieusaledaile,mungle30thang4",training_data.csv,6266
+5,centroid,7318389697540033793,0.2551870346069336,"""Mọi người chấm điểm giúp tui mái tóc sau ủ này nhaaa.","tresemmevn,kemutresemme,uvuottroi,tocvuotchuan",training_data.csv,74
+5,centroid,7379598225034022145,0.2597039043903351,Chiến thần Hà Linh đã khen thì không còn gì để chê cả nhà ạ 🥰,"lorealparis,serumhatim",training_data.csv,526
+5,centroid,7512797618800495880,0.26106229424476624,Giảo cổ lam Tuệ Linh - cách để mình thể hiện sự quan tâm và chăm sóc cho ba mỗi ngày,"giaocolamtuelinh,giảocổlamtuelinh,giảotuelinh,giaocolam5la,duoctuelinh,tuelinh,tuelinhchinhhang",training_data.csv,15102
+5,centroid,7354020761352342800,0.2630537450313568,Hãy Cmt 2 số bất kì.để mình gửi tặng bạn.Chiếc bàn phím cơ kỉ niệm của mình,"decor,setuppc,testter,banphimco",training_data.csv,254
+5,random,7518199031764356360,0.39471644163131714,"Ổ cắm chữ T Deli này đúng là cứu cánh cho góc bếp nhà mình luôn, vừa sạc nhanh được điện thoại vừa cắm thêm được bao nhiêu thiết bị mà vẫn gọn gàng, tiện lắm luôn mọi người ơi!","ocamdien,ocamdiendeli,ocamdienchut,ocamdienchutdeli,deli,namoinam",training_data.csv,25422
+5,random,7516071620981804295,0.39582791924476624,sau 1 thời gian sử dụng tôi là tôi mê cái ghế tắm đứng này lắm nha 10₫ ko có nhưng,"mevabe,embedangyeu,nuoicon,chamcon,ghetamdung,tambe",streaming_data.csv,1256
+5,random,7506527352378166548,0.4922984540462494,Nếu mọi người thắc mắc làn da cô ấy sau 10 tiếng makeup mỗi ngày trông như thế nào… 🌞,"chongnangahc,ahcvietnam,vlog,chloenguyen,hoptaccungunilever",training_data.csv,9202
+5,random,7519468351136042260,0.39993271231651306,Không thể tin được AI trên điện thoại lại đỉnh như thế này luôn!!!,"honor400,honorvietnam,hungrv",streaming_data.csv,1640
+5,random,7513173604696149266,0.4275282919406891,"Sức khỏe tốt thì tự nhiên mọi việc đều tốt, đúng chuẩn với câu nói: có sức khỏe là có tất cả luôn mọi người.","fami,hatvangtronglanghat,totcatramphan,songcanbang",training_data.csv,15626
+6,centroid,7492783891674107154,0.27016592025756836,Gá»£i Ã½ set máº·c hÃ¨ cho chá» em ÄÃ¢y áº¡!,"meethichmacdep,setbonu,thotay,thotayboutique,setnu,fashion,style,trending",training_data.csv,4782
+6,centroid,7518259537783065874,0.27449947595596313,Tá»¥ Äiá»m má»i cho há»i ghiá»n shopping vÃ  sá»ng áº£o ÄÃ¢y rá»iii,"ohsome,ohvietstyle,ohsomevietnam,fyp,saigon,hcmc",training_data.csv,25658
+6,centroid,7519128738781580565,0.28403472900390625,Äi háº¹n hÃ² tháº¿ nÃ y áº»m cÃ³ Æ°ng hÃ´ng ta,"chuyenmacdo,learnontiktok,phoidonam",training_data.csv,28254
+6,centroid,7505660373085867282,0.2840440571308136,Tiktok chá»n nháº¡c bÃ i nÃ o lÃªn xh bÃ i ÄÃ³ ð,"kartychang,phuquy,summervibes",training_data.csv,8726
+6,centroid,7510235057966206226,0.2878028452396393,Äáº¡i Äáº¡i ik do dá»± trend qua máº¥t ð¥°,kartychang,training_data.csv,12262
+6,random,7492646961326148872,0.3401309847831726,Äi Än chÃ¡o gÃ¬ váº­y Mee?!?!,"meethichmacdep,tiktok,viral,trending,outfit,fashion,setnu,bikinimodel",training_data.csv,4750
+6,random,7516049451069263112,0.32777267694473267,"1h ngá»§ 7h dáº­y thÃ¬ má»¥n ta nÃ³i nÃ³ Ãª há», má»¥n Äi Äá» láº¡i thÃ¢m má»¥n, ta buá»n ta xÃ i Abib =))","nangmo,abibvn,glutathiosome,exosome",training_data.csv,20354
+6,random,7516486829063900424,0.4523695409297943,Phá»i Äá» trá» thÃ nh CÃ´ng ChÃºa ðð¥°,"xuhuong,phoidoxinh,viral,thoitrangnuhottrend,fashion,thoitrang",training_data.csv,21214
+6,random,7518257665294732551,0.4938702881336212,Anh chÆ°a lo ÄÆ°á»£c em?...,"connguoi,fyp",training_data.csv,25642
+6,random,7506152638434610450,0.527668297290802,Clip nÃ y mÃ  flop t cho mi sá»ng áº©n luÃ´n,,training_data.csv,9014
+7,centroid,7516546716707851528,0.2433580607175827,Glowed up thanks to this pot.,"vbtun05ne,xuhuong,xh,chewing,chewinggum,mewing",training_data.csv,21514
+7,centroid,7517478117015817480,0.2528015971183777,"Dép sục bé gái, dép sục bé trai","xuhuong,taphoanhabasa,sucbegai,sucbetrai,depbegai,depbetrai,depbe,viralvideo,ilovetiktok❤️,trending",training_data.csv,23506
+7,centroid,7515780361616444679,0.25990885496139526,Hộp đựng giày gấp gọn🌟,"hopdunggiay,hopdunggiaydanang,decor,dogiadung,dogiadungtienich,homepicks,unboxing,xh,fyp,viral,plin_minnie13",training_data.csv,19922
+7,centroid,7519006361636588818,0.2684619724750519,Côn Đảo 2025 🌊,"viral,xuhuong",training_data.csv,27674
+7,centroid,7513426158185106696,0.26862832903862,Dáng mắt kiểu mắt quyết định đến 90% nhan nhắc và tính cách    mắt đẹp ai cũng mê,"xuhuong,xh,vbtun05ne,chewing,chewinggum,mewing",streaming_data.csv,4870
+7,random,7518977272968154386,0.5726933479309082,,"ukem,lamdeptainha,kemtron,hanhtrinhxaykenh,xaykenhtiktok",training_data.csv,27502
+7,random,7507594640988622088,0.4264128506183624,,"xuhuong,reviewlamdep,makeup,lipstick,son,intoyou,sonintoyou,intoyou,yenniiereview",streaming_data.csv,5074
+7,random,7505412528575434005,0.36222779750823975,Cách giúp răng bé trắng lại không cần đến nha sĩ nè!,"dpskids,xitchongsaurangdpskis,chuannhakhoa",training_data.csv,8674
+7,random,7509061613123685639,0.5114201903343201,góc nào cung dz h?t á??,"capcut,jonathan",training_data.csv,10970
+7,random,7519535209960819975,0.6518457531929016,,capcut,training_data.csv,29110

@@ -1,0 +1,68 @@
+{
+  "dataset_id": "vitied",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "graph_version": "vitied-g04-v2",
+  "source": "outputs\\g04\\vitied-20261013-370234d0358b-v2",
+  "export_checksums_verified": true,
+  "before": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "sounds": 0,
+    "topics": 0,
+    "post_hashtags": 40624,
+    "post_sounds": 0,
+    "post_topics": 0,
+    "observations": 0,
+    "post_observations": 0
+  },
+  "expected": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "post_hashtags": 40624,
+    "sounds": 0,
+    "post_sounds": 0,
+    "observations": 34750,
+    "topics": 0,
+    "post_topics": 0,
+    "post_observations": 34750
+  },
+  "first_load": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "sounds": 0,
+    "topics": 0,
+    "post_hashtags": 40624,
+    "post_sounds": 0,
+    "post_topics": 0,
+    "observations": 34750,
+    "post_observations": 34750
+  },
+  "reload": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "sounds": 0,
+    "topics": 0,
+    "post_hashtags": 40624,
+    "post_sounds": 0,
+    "post_topics": 0,
+    "observations": 34750,
+    "post_observations": 34750
+  },
+  "constraints": [
+    "vitied_hashtag_key",
+    "vitied_observation_key",
+    "vitied_post_key",
+    "vitied_sound_key",
+    "vitied_topic_key"
+  ],
+  "projection": "Post-HAS_HASHTAG-Hashtag, undirected, all dates, datasetId=vitied",
+  "connectivity": {
+    "component_count": 1571,
+    "largest_component_nodes": 16489,
+    "largest_component_posts": 7286,
+    "isolated_posts": 1176
+  },
+  "sound_limit": "All source music_id values unresolved in this source version",
+  "topic_limit": "No reviewed Post Topic labels",
+  "passed": true
+}

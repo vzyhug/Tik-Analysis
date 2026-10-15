@@ -1,0 +1,81 @@
+﻿cluster,sample_type,post_id,distance,caption_first_snapshot,hashtags_first_snapshot,source_file,source_row
+0,centroid,7516034238697786642,0.3105323314666748,Không c?n làm nails c?u kì nhung móng ph?i s?ch nha các nàng,"nailscare,duongmong",training_data.csv,20294
+0,centroid,7500934075792837906,0.31954148411750793,Tín hi?u zu tr? dã d?n lúc di gi?t c? hihihi,"giatco,xaphonggiatco,makeup,dailyroutine,makeuobrushes",training_data.csv,6874
+0,centroid,7513891425440910599,0.32017332315444946,i aint my ?? on u,,training_data.csv,16502
+0,centroid,7508381272176069906,0.33175143599510193,N?t cái b?n nháp . Tính làm yanglak mà cái m?t khum h?p l?m,"capcut,b?ntre71,xuhuong,xuhuongtiktok,2000s,abcxyz,b?ntre??????,caphe,????,genz,71bentre",training_data.csv,10502
+0,centroid,7513067035727990062,0.3320450782775879,"Hôm nay th? 6 ngày 6 tháng 6! Hi v?ng hôm nay di?n ra suông s? v?i 10 ngu?i khách, lét gâu. ??","cuocsongmy,fyp,adiml,cometoworkwithme,nailcontent,nanglu?ngtíchc?c,gelx,tapgel,sangtaonoidung,nailtiktok,allaboutnails,xuhuonglamdep,idonails,chaching,viettiktok",training_data.csv,15430
+0,random,7517528468339313928,0.45153653621673584,Look th? 3 d? dón sinh nh?t nho ??,"huynhtranynhi,missworldvietnam,tiktokgiaitri",training_data.csv,23690
+0,random,7514265157938334984,0.4893130660057068,V?y dê h? h?,"boxbilliards,boxstudio",training_data.csv,17118
+0,random,7516485656097344776,0.607866108417511,N?a nam nuôi tóc c?a tui,,training_data.csv,21206
+0,random,7496418652959427858,0.4392663240432739,Thân phận lần này là? Đặt tên giùm tui nha,,training_data.csv,5574
+0,random,7514181960810515719,0.4051327705383301,T?ng mom là ph?i c? dó,"klynh,viral,hoataytu",training_data.csv,16942
+1,centroid,7513475943894224136,0.2909441590309143,Háº¹ yÃªu dáº¥u cá»§a em ð¤£ð¤£,"minhchaucc,thuancon,banoichatchoi",training_data.csv,15982
+1,centroid,7519118332692368648,0.30566760897636414,Hong Hea In Än sÃ¡ng ð,,training_data.csv,28158
+1,centroid,7507265884424277255,0.30621206760406494,Fit check ✨🐠🐳🦀🌴☀️,"ootd,oo,thailand🇹🇭,phuket",streaming_data.csv,1490
+1,centroid,7518265184767528200,0.30621206760406494,Fit check 🤌,"huuluc,menswear,mensfashion,fyp,foryou",training_data.csv,25714
+1,centroid,7505263292512750856,0.3063804805278778,Outfit check day 4 in Taiwan ð,"schannel,picpixpik,fyp",training_data.csv,8558
+1,random,7519768433240870151,0.3760165572166443,Cáº£m Æ¡n ba mÃ¡ ð«°ð»,"viral,gagobrand,ootd,thoitrang,40kgoutfit",training_data.csv,29302
+1,random,7496144343628107015,0.45390862226486206,+1 mÃ¡y mÃª spider man ð¸ï¸ð·ï¸,"xuhuong,tiktok,lahmye,couple,fyp,háº¹nhã²,handmade,tangqua",training_data.csv,5518
+1,random,7515074477881904391,0.4135761559009552,The Amazing Bay check :))),"giadinhmilkne,theamazingbay",training_data.csv,18706
+1,random,7517673612665507080,0.35124126076698303,Em iu dáº­y rá»iiii ð,kyduyen,training_data.csv,24334
+1,random,7517513400419732758,0.43716609477996826,Content kÃªnh nÃ y lÃºc ná» lÃºc kia ðª¿,bachluuduong,training_data.csv,23614
+2,centroid,7325388176732753160,1.0848209086589122e-07,Trả lời,,training_data.csv,110
+2,centroid,7355176114949606672,1.0848209086589122e-07,Trả lời,,training_data.csv,262
+2,centroid,7378436675313093889,1.0848209086589122e-07,Trả lời,"quatcamtay,quatcamtayjisulife,jisulife",training_data.csv,502
+2,centroid,7384287232116542728,1.0848209086589122e-07,Trả lời,"roy,changtraitocdai,hairroutine",streaming_data.csv,3203
+2,centroid,7387407878941904136,1.0848209086589122e-07,Trả lời,"tuanminh88,menswear,sidetabtrousers,ootd",training_data.csv,686
+2,random,7516799068841020690,1.0848209086589122e-07,Trả lời,"dangminh,vulaci",training_data.csv,21918
+2,random,7519052602340805896,1.0848209086589122e-07,Trả lời,"loctomo,loctomo9,tainghe,tainghethethao,tainghebluetooth,tainghegaming",training_data.csv,27850
+2,random,7516468968970915090,1.0848209086589122e-07,Trả lời,"bounreview,review,filedungtailieu,filela",training_data.csv,21138
+2,random,7516077575077137682,1.0848209086589122e-07,Trả lời,"robot,thetrinh,loa,loabluetooth,xuhuong",training_data.csv,20422
+2,random,7511291432464911623,1.0848209086589122e-07,Trả lời,"chutprincess,outfit",training_data.csv,13046
+3,centroid,7514554209824525586,0.2876708507537842,ÄÃ  Láº¡t láº¡nh quÃ¡ Äi,"hoxuanhuongdalat,dalat,outfit,xuhuong,vairal",training_data.csv,17590
+3,centroid,7519484347125320978,0.2955682873725891,Cáº¯p sÃ¡ch Äáº¿n trÆ°á»ng vá»i outfit cÃ³ gu nhaa,"ootd,viral,mikoxinh",training_data.csv,28894
+3,centroid,7509731437923323144,0.3099220097064972,KÃªnh báº¡n Ã½ tÃ´i Äá» ÄÃ¢y,"connguoi,fyp",training_data.csv,11638
+3,centroid,7520114701687115025,0.315928190946579,VÃ¡y vÃ³c mÃ¹a hÃ¨ tÃ­ i ngÆ°á»i Äáº¹ppp,"synaeshy,dangtamgiacnguoc,ootd",training_data.csv,29554
+3,centroid,7515280612866018578,0.31654876470565796,"HÃ´m nay lÃ  Anni 6 nÄm 7 thÃ¡ng ð¥°ð Hai Äá»©a Äi xem phim, cafe vÃ  Lá»c táº·ng cho mÃ¬nh mÃ³n quÃ  siÃªu cute ná»¯að","odaycohanvaloc,genz,tichcuc,ideverray,vietnam,vlog,capdoi,yeuxa",training_data.csv,18870
+3,random,7516744231306775816,0.35375306010246277,Em máº¥t háº³n 3 nÄm cÃ¡c mom thÃ¬ sao?ð¤­ tá»« 48kg Äáº» xong 70kg hiá»n táº¡i con 3 tuá»i váº«n 53kg ð¥¹,"vochong,embe",training_data.csv,21682
+3,random,7510472845785386257,0.46271824836730957,Anh em mÃ¬nh cá»© tháº¿ thÃ´i háº¹ háº¹ háº¹,,streaming_data.csv,188
+3,random,7515789475855813895,0.39223772287368774,ko cÃ³ tháº¯t eo lÃ  máº·c Äá» gÃ¬ cÅ©ng 6 ???,"khaaidangiu,fashiontiktok,ilovetiktok,reviewbigsize,bigsize",training_data.csv,19974
+3,random,7515747383884401927,0.43277376890182495,Quáº¿ tÃ¨o lun:> há»t iu trai Äáº¹p,,training_data.csv,19766
+3,random,7518713548839701768,0.5429574251174927,T?m cùng ?nh du?i cùng 1 con mua á ??,"met53,ngocluongstory",training_data.csv,26970
+4,centroid,7513918893791005970,0.23889178037643433,Clean skin w me,"yasamaya,nuoctaytrang,taytrang600ml,skincareroutine,skincare,cleanskin",training_data.csv,16594
+4,centroid,7516498864816295175,0.2561878561973572,Quick quick quick haul,sully,training_data.csv,21262
+4,centroid,7520856345537547528,0.25886598229408264,Nhức nách,,streaming_data.csv,3620
+4,centroid,7520483365879827720,0.26194629073143005,Thisssss♥️🖤,"dinhquynhlan,dqlootd,dameungrr,ootd,outfitideas,mixandmatch,phoido,bodysuit",streaming_data.csv,1043
+4,centroid,7515374856582597895,0.2627389430999756,Suong suong,,training_data.csv,19114
+4,random,7478709339205799175,0.36000216007232666,Bún ốc Liễu Châu,,streaming_data.csv,2849
+4,random,7518021655961013512,0.43041369318962097,Đồng hồ thông minh HK10 Ultra3 Max,"haureview99,thanhcongnghe,learnontiktok,review,hk10ultra3max,donghothongminh,smartwatch,fypシ,fyp",training_data.csv,25250
+4,random,7517620347332611346,0.36264270544052124,màu anh thíc là màu vàng,,training_data.csv,23978
+4,random,7498658865483877639,0.36709702014923096,Ê liền liền😎,"carslan,phanphu,makeup,foryou",streaming_data.csv,3455
+4,random,7513799773829303553,0.4087393581867218,Lấy Video TikTok Làm Nền Cuộc Gọi,"thanhcongnghe,android,learnontiktok,phanthanhnam93",training_data.csv,16342
+5,centroid,7350725420905450759,0.2902946472167969,Nhìn tưởng đẹp mã thôi mà nghe cũng hay phết nha,"decorpc,tainghebluetooth,tainghe,xuhuong,xuhuongtiktok,lotso",training_data.csv,238
+5,centroid,7517630086338579720,0.2959180474281311,Nằm điều hòa cả ngày mà không lo tiền điện? Có ngay Máy lạnh Panasonic Inverter 1 HP CU/CS-PU9AKH-8,"maylanh,pansonic,dienmayxanh,dmx,pu9akh",training_data.csv,24050
+5,centroid,7520120370695834898,0.300603449344635,Nghe bảo mẫu áo này đang hott,"biển,dibienmacgi,phuyen,viral,navie",streaming_data.csv,4447
+5,centroid,7517282543838842120,0.30061498284339905,Triển lãm chỉ mở đến cuối tuần này thui nên cả nhà hãy save video lại rùi rủ bestie đi cùng nhaaa 💙,"aquafina,aquafinaartofpurity,trienlam,event,chloenguyen",training_data.csv,23310
+5,centroid,7519886385315106055,0.3054907023906708,Mí bà hỏi em này nhiều qué,"duongtrang,aochongnang,bodycare,neau,neauvietnam,uvprotection30,fabrictechnology",streaming_data.csv,1961
+5,random,7518366263584771346,0.3430292308330536,10 điểm địa lý mà thế này đây,"duongdereview,learnontiktok,mcv",training_data.csv,26122
+5,random,7516522466278214920,0.46288391947746277,"Tín đồ bò mỹ đâu cả rồi, hot hot hot lắm luôn. Đi ăn thôi nào 👌🥰","gyushige,nguuphon,usbeef,yakiniku",training_data.csv,21382
+5,random,7507236155855867144,0.4310806095600128,Từ ngày có em này mình yên tâm hẳn nha,"camerawifi,cameraanninh,botslabw302",training_data.csv,9598
+5,random,7519777395209964808,0.35079091787338257,Mặc chụp ảnh thế này là đẹp,"met53,ngocluongstory",streaming_data.csv,3868
+5,random,7513958786894138632,0.35195180773735046,ĐẮP MẶT NẠ ĐÚNG CÁCH NHA MÍ BÀ OI !!!!,"colorkeynewarrivalday,colorkeyxcapybara,summerchill,colorkeyluminous,matnab3,matna",training_data.csv,16782
+6,centroid,7507856631296707847,0.26661187410354614,"Mất ngủ, bốc hoá, rối loại chu kì ..... Đừng quá lo lắng vì đã có 👉   Bảo Xuân Gold, viên uống giúp bổ sung nội tiết tố nữ từ thảo dược.","mecunmiu06,baoxuangold,vienuongbaoxuan,canbangnoitiet",streaming_data.csv,2504
+6,centroid,7487001952774049079,0.2876209020614624,Hẹn các bà vào Live của Huyền lúc 15h-22h ngày 29/03 nhá,"huyenmiko,livetreambanhang,livetreamtiktok,mypham,pinkpunk",training_data.csv,4082
+6,centroid,7519911038997859592,0.2889189124107361,100 cuoc goi den nsx khi nao co phan moi,,streaming_data.csv,4885
+6,centroid,7518376794681117970,0.29380351305007935,Sữa ColosBaby Gold Mới tăng đề kháng được nhỏ bạn bác sĩ tặng thì phải gọi là hết nước chấm,"colosbaby,suanonngaydau,tangcuongmiendichcbb,tudolonkhoe",training_data.csv,26206
+6,centroid,7518051578507431175,0.2979108691215515,Cường lực điện thoại ch.ống nhìn trộm,"unboxing,fyp,viral,cuongluctudan,cuonglucchongnhintrom,phukiendienthoai",training_data.csv,25346
+6,random,7403391360604114194,0.658317506313324,chân ái cho da mụnnn nè,"tambietmunphiensau7ngay,tramtracica,bha,beauty",streaming_data.csv,4915
+6,random,7507252147549965575,0.3935309946537018,Bỉm hanakids cho các mẹ đây,"bimchobe,bimhanakisd,bim,bimquanchobe",training_data.csv,9638
+6,random,7508988573832465672,0.3658396005630493,Em xin post lại video và xin lỗi đã đưa thông tin chủ quan từ một phía ạ 🫠 nhân tiện các bác recommend luôn chỗ khám bàn chân bẹt cho mn tham khảo nhoa,"chanhealthy,metub",training_data.csv,10898
+6,random,7514317624218570002,0.40195804834365845,Bảo bối giúp giúp anh xã nhà mình tươi khoẻ mỗi ngày là đây!,"giảiđộcgantuệlinh,giảiđộcgantuệlinhplus,cagaileo,duoctuelinh,xuhuong,thuminhkt,minhthureview",training_data.csv,17386
+6,random,7470894411115760904,0.5528504252433777,Cục sạc Pisen đa năng cho ae tham khảo,"pisen,tramsacpisen",training_data.csv,2986
+7,centroid,7496854392323214599,0.15382643043994904,Tr? l?i,"linkcua,fyp,wonderplus,vitaminc",training_data.csv,5686
+7,centroid,7501661833749712146,0.15382643043994904,Tr? l?i,"linkcua,fypp",training_data.csv,7126
+7,centroid,7502022384992390408,0.15382643043994904,Tr? l?i,,training_data.csv,7246
+7,centroid,7502745809893559572,0.15382643043994904,Tr? l?i,"foxiereview,beautybyfoxie",training_data.csv,7526
+7,centroid,7502804495462812946,0.15382643043994904,Tr? l?i,"huanganne,sonly,colorkey",training_data.csv,7598
+7,random,7519172090436537620,0.15382643043994904,Tr? l?i,"foxiereview,beautybyfoxie",training_data.csv,28402
+7,random,7514546671854832914,0.15382643043994904,Tr? l?i,"dangquynhlam,makeup,camthuong",training_data.csv,17566
+7,random,7512391909919214856,0.15382643043994904,Tr? l?i,"hairstyle,goclamdep,layeredhaircut,lamdep",training_data.csv,14462
+7,random,7514560886145666311,0.15382643043994904,Tr? l?i,"hoanglinh,skicare,hetmun,xuhuong",training_data.csv,17606
+7,random,7519420781521030418,0.15382643043994904,Tr? l?i,hoangthachhh,training_data.csv,28722

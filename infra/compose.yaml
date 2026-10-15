@@ -1,0 +1,196 @@
+name: trend-detect
+
+x-hadoop: &hadoop
+  image: apache/hadoop:3.4.2
+  user: "0:0"
+  entrypoint: ["/bin/bash", "/bootstrap/start-hdfs.sh"]
+  environment: &hadoop-env
+    HADOOP_CONF_DIR: /opt/hadoop/etc/hadoop
+    HADOOP_LOG_DIR: /tmp/hadoop-logs
+    HADOOP_CLIENT_OPTS: "-Xmx256m"
+    HADOOP_USER_NAME: hadoop
+    HADOOP_HEAPSIZE_MAX: "256m"
+  restart: unless-stopped
+  cpus: 1.0
+
+x-hdfs-config: &hdfs-config
+  - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+  - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+  - ./hadoop/start-hdfs.sh:/bootstrap/start-hdfs.sh:ro
+
+x-spark: &spark
+  image: apache/spark:4.0.2-python3
+  user: "0:0"
+  entrypoint: ["/bin/bash", "-c"]
+  environment: &spark-env
+    SPARK_DAEMON_MEMORY: "256m"
+    HADOOP_CONF_DIR: /hadoop-conf
+    HADOOP_USER_NAME: hadoop
+    PYSPARK_PYTHON: python3
+    SPARK_LOCAL_DIRS: /tmp/spark-local
+  volumes: &spark-volumes
+    - ../:/workspace
+    - ./hadoop/core-site.xml:/hadoop-conf/core-site.xml:ro
+    - ./hadoop/hdfs-site.xml:/hadoop-conf/hdfs-site.xml:ro
+    - ./spark/spark-defaults.conf:/opt/spark/conf/spark-defaults.conf:ro
+  working_dir: /workspace
+  restart: unless-stopped
+
+services:
+  namenode:
+    <<: *hadoop
+    hostname: namenode
+    command: ["namenode"]
+    environment:
+      <<: *hadoop-env
+      HADOOP_HEAPSIZE_MAX: "512m"
+    mem_limit: 1024m
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - ./hadoop/start-hdfs.sh:/bootstrap/start-hdfs.sh:ro
+      - ../data/raw/vitied:/source/vitied:ro
+      - namenode-data:/data/name
+    ports:
+      - "127.0.0.1:9870:9870"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/9000"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 25s
+  datanode-1:
+    <<: *hadoop
+    hostname: datanode-1
+    command: ["datanode"]
+    mem_limit: 512m
+    depends_on:
+      namenode: {condition: service_healthy}
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - ./hadoop/start-hdfs.sh:/bootstrap/start-hdfs.sh:ro
+      - datanode-1-data:/data/data
+    healthcheck: &dn-health
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/9864"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 15s
+  datanode-2:
+    <<: *hadoop
+    hostname: datanode-2
+    command: ["datanode"]
+    mem_limit: 512m
+    depends_on:
+      namenode: {condition: service_healthy}
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - ./hadoop/start-hdfs.sh:/bootstrap/start-hdfs.sh:ro
+      - datanode-2-data:/data/data
+    healthcheck: *dn-health
+  datanode-3:
+    <<: *hadoop
+    hostname: datanode-3
+    command: ["datanode"]
+    mem_limit: 512m
+    depends_on:
+      namenode: {condition: service_healthy}
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - ./hadoop/start-hdfs.sh:/bootstrap/start-hdfs.sh:ro
+      - datanode-3-data:/data/data
+    healthcheck: *dn-health
+  spark-master:
+    <<: *spark
+    hostname: spark-master
+    command: ["exec /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host spark-master --port 7077 --webui-port 8080"]
+    mem_limit: 384m
+    cpus: 1.0
+    ports:
+      - "127.0.0.1:8080:8080"
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import socket; socket.create_connection(('spark-master',7077),3).close()"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  spark-worker-1:
+    <<: *spark
+    hostname: spark-worker-1
+    command: ["exec /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --host spark-worker-1 --cores 1 --memory 768m --webui-port 8081 --work-dir /tmp/spark-work spark://spark-master:7077"]
+    mem_limit: 1280m
+    cpus: 1.0
+    depends_on:
+      spark-master: {condition: service_healthy}
+    ports:
+      - "127.0.0.1:8081:8081"
+    healthcheck: &worker-health
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/json/',timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  spark-worker-2:
+    <<: *spark
+    hostname: spark-worker-2
+    command: ["exec /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --host spark-worker-2 --cores 1 --memory 768m --webui-port 8081 --work-dir /tmp/spark-work spark://spark-master:7077"]
+    mem_limit: 1280m
+    cpus: 1.0
+    depends_on:
+      spark-master: {condition: service_healthy}
+    ports:
+      - "127.0.0.1:8082:8081"
+    healthcheck: *worker-health
+  spark-driver:
+    <<: *spark
+    hostname: spark-driver
+    command: ["exec tail -f /dev/null"]
+    mem_limit: 1280m
+    cpus: 2.0
+    depends_on:
+      namenode: {condition: service_healthy}
+      datanode-1: {condition: service_healthy}
+      datanode-2: {condition: service_healthy}
+      datanode-3: {condition: service_healthy}
+      spark-worker-1: {condition: service_healthy}
+      spark-worker-2: {condition: service_healthy}
+    ports:
+      - "127.0.0.1:4040:4040"
+  neo4j:
+    image: neo4j:5.26.0-community
+    profiles: ["graph"]
+    hostname: neo4j
+    mem_limit: 1280m
+    cpus: 2.0
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH_FILE: /run/secrets/neo4j_auth
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    secrets: [neo4j_auth]
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    ports:
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/7474"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+
+volumes:
+  namenode-data:
+  datanode-1-data:
+  datanode-2-data:
+  datanode-3-data:
+  neo4j-data:
+  neo4j-logs:
+
+secrets:
+  neo4j_auth:
+    file: ../config/secrets/neo4j_auth.txt

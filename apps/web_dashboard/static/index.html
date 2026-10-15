@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f3">
+  <title>ViTIED — Tín hiệu nội dung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="customer-dashboard">
+  <div class="dashboard-layout">
+    <aside class="report-sidebar">
+      <a class="customer-brand" href="#overview"><span class="brand-mark">V</span><span>ViTIED<small>CONTENT INTELLIGENCE</small></span></a>
+      <div class="sidebar-caption">BÁO CÁO XU HƯỚNG</div>
+      <nav class="report-nav" aria-label="Các phần báo cáo">
+        <a class="report-link active" href="#overview" data-view="overview"><span>◫</span><span>Tổng quan</span></a>
+        <a class="report-link" href="#momentum" data-view="momentum"><span>↗</span><span>Nhịp tăng / giảm</span></a>
+        <a class="report-link" href="#projection" data-view="projection"><span>⌁</span><span>Kịch bản 4 tuần</span></a>
+        <a class="report-link" href="#engagement" data-view="engagement"><span>◉</span><span>Phản hồi nội dung</span></a>
+        <a class="report-link" href="#groups" data-view="groups"><span>▤</span><span>So sánh nhóm</span></a>
+        <a class="report-link" href="#network" data-view="network"><span>⌘</span><span>Mạng lưới quan hệ</span></a>
+      </nav>
+      <div class="sidebar-source"><i></i><span><b>Mẫu creator ViTIED</b><small>Nguồn phân tích</small></span></div>
+    </aside>
+
+    <div class="dashboard-workspace">
+      <header class="workspace-header">
+        <div><div class="eyebrow">TIKTOK · VIỆT NAM</div><h1 id="view-title">Tổng quan xu hướng</h1><p id="view-subtitle">Phân tích nhịp nội dung, độ phủ creator và phản hồi trong kỳ.</p></div>
+        <div class="header-actions"><span id="updated">Đang tải dữ liệu…</span><button id="refresh" class="refresh-button" type="button">↻ <span>Làm mới</span></button></div>
+      </header>
+
+      <section class="filters customer-filters" aria-label="Khoảng thời gian phân tích">
+        <label>Ngày đăng từ<input id="from" type="date"></label><span class="date-separator">đến</span>
+        <label>Ngày đăng đến<input id="to" type="date"></label>
+        <button id="apply" class="apply-button" type="button">Cập nhật báo cáo</button>
+      </section>
+      <div id="error" class="error-banner" role="alert" hidden></div>
+      <div id="freshness" class="freshness-banner" role="status">Đang xác định thời điểm cập nhật gần nhất…</div>
+
+      <main class="report-content">
+        <section class="report-view active" data-report="overview">
+          <div class="insight-hero" aria-live="polite">
+            <div><span class="insight-label">ĐIỂM ĐÁNG CHÚ Ý</span><h2 id="headline">Đang phân tích các nhóm nội dung…</h2><p id="headline-copy">Đối chiếu thay đổi thị phần với số creator cùng tham gia.</p></div>
+            <div class="insight-stat"><b id="headline-delta">—</b><span id="headline-support">—</span></div>
+          </div>
+          <div class="overview-grid">
+            <article class="customer-card"><div class="card-heading"><div><span class="card-kicker">NHỊP THAY ĐỔI</span><h2>Nhóm nội dung tăng và giảm</h2><p>So sánh tỷ trọng bài đăng giữa hai giai đoạn 4 tuần cuối.</p></div><span class="heading-mark">01</span></div><div id="change-chart" class="customer-chart"></div></article>
+            <article class="customer-card"><div class="card-heading"><div><span class="card-kicker">ĐỘ LAN RỘNG</span><h2>Tín hiệu có nhiều creator tham gia?</h2><p>Creator đăng gần đây so với mức thay đổi thị phần.</p></div><span class="heading-mark">02</span></div><div id="breadth-chart" class="customer-chart"></div></article>
+          </div>
+          <button class="next-report" data-go="momentum" type="button">Xem chi tiết nhịp tăng / giảm <span>→</span></button>
+        </section>
+
+        <section class="report-view" data-report="momentum">
+          <div class="section-intro"><div class="card-kicker">TĂNG TRƯỞNG TRONG MẪU</div><h2>Nhịp tăng / giảm theo nhóm</h2><p>Thay đổi tỷ trọng giữa 4 tuần gần nhất và 4 tuần trước đó. Độ dài thanh thể hiện mức đổi; màu xanh là tăng, đỏ là giảm.</p></div>
+          <article class="customer-card report-card"><div id="change-chart-detail" class="customer-chart large-bars"></div></article>
+          <div class="section-intro compact-intro"><div class="card-kicker">ĐỘ PHỦ CREATOR</div><h2>Mức thay đổi có lan rộng không?</h2><p>Mỗi điểm là một nhóm nội dung. Nhóm ở bên phải có nhiều creator tham gia hơn; nhóm phía trên đang tăng tỷ trọng.</p></div>
+          <article class="customer-card report-card"><div id="breadth-chart-detail" class="customer-chart large-plot"></div></article>
+        </section>
+
+        <section class="report-view" data-report="projection">
+          <div class="section-intro"><div class="card-kicker">KỊCH BẢN THAM CHIẾU</div><h2>Thị phần 4 tuần sau kỳ quan sát</h2><p>Giữ tỷ trọng của 4 tuần gần nhất làm mốc tham chiếu cho từng nhóm.</p></div>
+          <article class="customer-card report-card"><div id="forecast-chart" class="customer-chart forecast-chart large-forecast"></div><div id="forecast-legend" class="chart-legend"></div></article>
+        </section>
+
+        <section class="report-view" data-report="engagement">
+          <div class="section-intro"><div class="card-kicker">PHẢN HỒI NỘI DUNG</div><h2>Tỷ lệ lượt thích trên lượt xem</h2><p>So sánh mức phản hồi điển hình giữa các nhóm, dựa trên lần ghi nhận gần nhất của mỗi bài.</p></div>
+          <article class="customer-card report-card"><div id="engagement-chart" class="customer-chart large-bars"></div></article>
+          <p class="plain-note">Giá trị sử dụng trung vị để hạn chế ảnh hưởng của một số bài có lượt xem vượt trội.</p>
+        </section>
+
+        <section class="report-view" data-report="groups">
+          <div class="section-intro"><div class="card-kicker">BẢNG SO SÁNH</div><h2>Nhóm nội dung theo caption</h2><p>Đối chiếu tỷ trọng, độ phủ creator và mức thay đổi của từng nhóm.</p></div>
+          <article class="customer-card report-card signal-table-card"><div class="table-wrap"><table><thead><tr><th>Nhóm nội dung</th><th class="numeric">Tỷ trọng trước</th><th class="numeric">Gần đây</th><th class="numeric">Thay đổi</th><th class="numeric">Creator</th><th class="numeric">Tuần tăng</th><th class="numeric">Kịch bản</th></tr></thead><tbody id="signal-rows"></tbody></table></div></article>
+          <div class="plain-note">Tên nhóm được rút gọn từ các cụm từ thường gặp trong caption.</div>
+        </section>
+
+        <section class="report-view" data-report="network">
+          <div class="section-intro"><div class="card-kicker">LINK ANALYSIS · MẠNG TOÀN CỤC</div><h2>Hashtag nào giữ vai trò trung tâm?</h2><p>Toàn bộ hashtag được nối qua các bài cùng xuất hiện. ArticleRank đo ảnh hưởng lan truyền; Closeness Centrality xếp hashtag có khoảng cách đường đi ngắn tới phần còn lại của mạng.</p></div>
+          <div class="network-controls">
+            <label>Xếp hạng đồ thị<select id="network-rank"><option value="articlerank">ArticleRank · ảnh hưởng liên kết</option><option value="closeness">Closeness Centrality · khoảng cách ngắn</option></select></label>
+            <label>Số node nổi bật<select id="network-limit"><option value="40">40 node</option><option value="70" selected>70 node</option><option value="100">100 node</option></select></label>
+            <button id="network-load" class="apply-button" type="button">Phân tích mạng</button>
+            <span id="network-summary" class="network-summary">Đang tính điểm trên mạng toàn cục…</span>
+          </div>
+          <div class="link-kpis">
+            <article><span>HASHTAG TRONG KỲ</span><b id="link-kpi-nodes">—</b></article>
+            <article><span>LIÊN KẾT ĐƯỢC CHẤM</span><b id="link-kpi-edges">—</b></article>
+            <article><span>ARTICLE RANK CAO NHẤT</span><b id="link-kpi-central">—</b></article>
+            <article><span>CLOSENESS CENTRALITY CAO NHẤT</span><b id="link-kpi-closeness">—</b></article>
+          </div>
+          <article class="customer-card network-card">
+            <div class="network-chart-head"><div><h3>Mạng đồng xuất hiện có trọng số</h3><p id="network-chart-note">Mỗi node là hashtag; cạnh là số bài dùng chung đã điều chỉnh theo mức phổ biến.</p></div><div class="network-legend"><span><i class="legend-hashtag"></i>ArticleRank cao</span><span><i class="legend-closeness"></i>Closeness Centrality cao</span></div></div>
+            <div class="network-zoom-controls" aria-label="&#272;i&#7873;u khi&#7875;n m&#7841;ng"><span class="graph-gesture-hint">K&#233;o node &middot; k&#233;o n&#7873;n &#273;&#7875; di chuy&#7875;n &middot; cu&#7897;n &#273;&#7875; ph&#243;ng to/thu nh&#7887;</span><button id="network-zoom-in" type="button" aria-label="Ph&#243;ng to">+</button><button id="network-zoom-out" type="button" aria-label="Thu nh&#7887;">&#8722;</button><button id="network-reset" type="button">&#272;&#7863;t l&#7841;i b&#7889; c&#7909;c</button></div>
+            <div id="network-stage" class="network-stage" role="group" aria-label="Mạng hashtag toàn cục, node được xếp hạng bằng link analysis"></div>
+          </article>
+          <article id="network-detail" class="network-detail" aria-live="polite"><span class="detail-prompt">Chọn node hoặc cạnh để xem điểm số và lực liên kết.</span></article>
+          <div class="link-rank-grid">
+            <article class="customer-card"><div class="card-heading"><div><span class="card-kicker">ARTICLE RANK</span><h2>Node trung tâm</h2><p>Tầm quan trọng tích lũy qua các liên kết mạnh trong mạng.</p></div></div><div id="articlerank-table" class="link-rank-list"></div></article>
+            <article class="customer-card"><div class="card-heading"><div><span class="card-kicker">CLOSENESS CENTRALITY</span><h2>Hashtag gần trung tâm</h2><p>Khoảng cách đường đi ngắn có trọng số tới các hashtag còn lại.</p></div></div><div id="closeness-table" class="link-rank-list"></div></article>
+          </div>
+          <details class="method-details"><summary>Cách tính điểm liên kết</summary><div><p>Hai hashtag tạo một cạnh khi cùng xuất hiện trong ít nhất 3 bài và 2 creator. Trọng số dùng Positive Pointwise Mutual Information (PPMI), log support và số creator; cạnh phổ biến rộng nhưng ít liên hệ đặc thù sẽ nhận trọng số thấp.</p><p>ArticleRank giảm phần truyền điểm từ node bậc thấp bằng mẫu số strength của node cộng strength trung bình toàn mạng; phép lặp dùng damping 0,85 trên cạnh có trọng số. Closeness Centrality chạy Dijkstra từ từng hashtag có liên kết, dùng khoảng cách cạnh bằng 1/trọng số; điểm được hiệu chỉnh theo tỷ lệ node tiếp cận được trong toàn graph để xử lý các thành phần rời nhau. Đồ thị phía trên phóng to các node xếp hạng cao.</p></div></details>
+        </section>
+      </main>
+      <footer class="customer-footer"><span>Nguồn: mẫu creator ViTIED</span><span id="source-date">—</span></footer>
+    </div>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

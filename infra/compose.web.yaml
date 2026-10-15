@@ -1,0 +1,26 @@
+# Local Neo4j-backed web dashboard; merge with compose.yaml.
+services:
+  web-dashboard:
+    build:
+      context: ..
+      dockerfile: apps/web_dashboard/Dockerfile
+    hostname: web-dashboard
+    restart: unless-stopped
+    mem_limit: 384m
+    cpus: 1.0
+    environment:
+      NEO4J_HTTP_URL: http://neo4j:7474
+      NEO4J_AUTH_FILE: /run/secrets/neo4j_auth
+    secrets: [neo4j_auth]
+    volumes:
+      - ../outputs/quality/g05_model_dashboard_vitied-g05-captiononly-ae64-live-20261016-v3.json:/app/model_analysis.json:ro
+    ports:
+      - "127.0.0.1:8787:8000"
+    depends_on:
+      neo4j: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health',timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+

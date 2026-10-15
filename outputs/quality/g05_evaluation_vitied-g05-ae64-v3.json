@@ -1,0 +1,32 @@
+{
+  "feature_version": "vitied-g05-hashidf512-v3",
+  "model_version": "vitied-g05-ae64-v3",
+  "baseline": "train-only hash-IDF 512 -> TruncatedSVD 64",
+  "svd_mse": {
+    "train": 0.0013151386519894004,
+    "validation": 0.0014290050603449345,
+    "test": 0.0014247765066102147
+  },
+  "svd_cluster_seed_stability_ari": 0.7877859114721426,
+  "svd_validation_silhouette": 0.03572104126214981,
+  "autoencoder_test_mse": 0.0015645516476552937,
+  "zero_test_mse": 0.001953124816652379,
+  "cluster_k": 8,
+  "cluster_seed_stability_ari": 0.8318230557955927,
+  "validation_silhouette": 0.02748286724090576,
+  "train_cluster_sizes": {
+    "0": 1106,
+    "1": 617,
+    "2": 611,
+    "3": 584,
+    "4": 877,
+    "5": 431,
+    "6": 1464,
+    "7": 661
+  },
+  "review_file": "E:\\nam4_hk1\\BigData\\Trend-Detect\\outputs\\g05\\cluster_review_vitied-g05-ae64-v3.csv",
+  "summary_file": "E:\\nam4_hk1\\BigData\\Trend-Detect\\outputs\\g05\\cluster_summary_vitied-g05-ae64-v3.csv",
+  "review_status": "pending_manual_review",
+  "created_at_utc": "2026-10-14T10:01:41.836534+00:00",
+  "passed": true
+}

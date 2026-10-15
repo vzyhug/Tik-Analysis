@@ -1,0 +1,82 @@
+{
+  "graph_version": "vitied-g04-v2",
+  "dataset_id": "vitied",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "silver_path": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+  "silver_schema_version": "vitied-silver-v3",
+  "exported_at_utc": "2026-10-15T17:47:21.946225+00:00",
+  "spark_application_id": "app-20261015174639-0000",
+  "master": "spark://spark-master:7077",
+  "task_hosts": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "tables": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "post_hashtags": 40624,
+    "sounds": 0,
+    "post_sounds": 0,
+    "observations": 34750
+  },
+  "readback": {
+    "posts": 9114,
+    "hashtags": 10549,
+    "post_hashtags": 40624,
+    "sounds": 0,
+    "post_sounds": 0,
+    "observations": 34750
+  },
+  "checksums": {
+    "posts": {
+      "part-00000-edd38a47-c160-4604-b629-453b616d1686-c000.json": "30e729f78ff17cbea8ac4afde669671d5dfdb76a03075023098a9cf3ca092dd5",
+      "part-00001-edd38a47-c160-4604-b629-453b616d1686-c000.json": "c54e3f3d247e78a4e99f78be7b200c99d4511b11ddf41f3a01b6d92c6bb7cbe3",
+      "part-00002-edd38a47-c160-4604-b629-453b616d1686-c000.json": "ea169374400ca6630753e937902dce372f434188c1dd33e3da83827395a37507",
+      "part-00003-edd38a47-c160-4604-b629-453b616d1686-c000.json": "b3bd666cf43ee878cadb917feb55dd5f7c27e6070f55f8b23e2913bcd23189a3",
+      "part-00004-edd38a47-c160-4604-b629-453b616d1686-c000.json": "c662ac3cd183c7fdc8f7747da1b5efec7f748eee3e8d87abfb571d7028ac0544",
+      "part-00005-edd38a47-c160-4604-b629-453b616d1686-c000.json": "ab86c3eb24c4a948faf4418985622873dac0030ece66437164edf109875c8635",
+      "part-00006-edd38a47-c160-4604-b629-453b616d1686-c000.json": "93b50dde02eba9580b482a2a4d9698a58caec9ea399a73c8e23ec02de5f21efb",
+      "part-00007-edd38a47-c160-4604-b629-453b616d1686-c000.json": "aa4a68aa5441da1c9cffd4e422e999dcdb143850e9ee9b5f050bf8ac8550561c"
+    },
+    "hashtags": {
+      "part-00000-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "374fd679979dda4709b6ce1d4230272bec7a73ef354203269ceb865bbe2edc7a",
+      "part-00001-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "265c6f400e589eabe502a634b52d32ea6d4c3fcdff48dff74212d55b3136f4f9",
+      "part-00002-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "5e2d189d849f32c829d3b27755b44f0bcc22cdada63ae7d91ae38a1122445285",
+      "part-00003-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "045b5dae16c069ea50341f191ca8e482b27f363aa08f8662c71fa60b6e628730",
+      "part-00004-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "18f0cd7ac36852a3d3718599913cc2a6cc9fe3ad9faf638dffba600bad876a6b",
+      "part-00005-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "7b99ea0c5dbf9e3598b6d0cf22865ed3159def0735200f86ac2676e69fc0afba",
+      "part-00006-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "3b1eb8ec8d49face0df2065271242dadd1f9494c39c2fc448593cd73d5d1e478",
+      "part-00007-4adaae57-1595-456f-b9a9-b8d4069bb855-c000.json": "47c50774a5172bc2d1d8193d6b63234649f04ffc285a464e50497ba3605f14d2"
+    },
+    "post_hashtags": {
+      "part-00000-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "ab4e84f3c909103b074be4c869a5a40cc0503d6010d7fe9c20228bb4bf490548",
+      "part-00001-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "01b5092cdec5cecf1f54f198eac4c9a0945eb20b3b717095421b06951832bb34",
+      "part-00002-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "634c8d131dca2c8aba8b074ffe61969995660cfe8c03daa9bc453119d91bdf46",
+      "part-00003-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "7a14c99a486a3c0602c206142a86cd2b3214fd42b6841621c470b700d0a5943a",
+      "part-00004-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "191270e8b92da96bd5daad62a74ecfac7a6282ea7e5d147050f3f4129d1da074",
+      "part-00005-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "038b63098ae1ab47947dd6d25de3828c926896eb205e2ded91eab193f9140a73",
+      "part-00006-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "583f40785cceb3483d48446821e21c0788f72d600a17f0d66740d229dc69eb7b",
+      "part-00007-63b936cd-716b-4dbb-acc4-fd99dd818977-c000.json": "5cd4c8e9a53985ba841953581074b2d218583aaf6eb772111801ad6b35eeebab"
+    },
+    "sounds": {
+      "part-00000-9fb4a8f5-21df-43c6-a4ba-f607607f3074-c000.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "post_sounds": {
+      "part-00000-9ca4a67e-26d2-4d41-8ba9-341d2298d8f8-c000.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observations": {
+      "part-00000-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "8977dc13c3eb180af8361af68262e6c769bd1d29546d99da24fa9e124c6344d4",
+      "part-00001-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "4c36be7fe1637509265d0c9a425dd485354b6be7364c9b51d32a46f5d676337a",
+      "part-00002-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "45df7410d365d326aeb4012dad57d91833b09f249f904f0cdb5301c059ffc49c",
+      "part-00003-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "1b01b03b743f11b25fd23d1ffe42267eb21a20c6678ae70df223104bc2f5795c",
+      "part-00004-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "12e58e3889226f04b7dbc6bf8a7bcc49c263d2a58ce12b750e73921de333a59b",
+      "part-00005-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "e7a74eb720ff0889efd192b605db1dc27c472f000ca6141e9073dee3b9ee2405",
+      "part-00006-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "d06d2c6a43f25afab4b5afb70167f7099191817a81989490d7f56d4ecd28b3b3",
+      "part-00007-1bc263a0-501f-454a-bb4c-08316b372c22-c000.json": "1d1c999209c9a28ec9530daa90167de2e02b35b293584b1c40eafbe61dd526f9"
+    }
+  },
+  "unresolved_sound_observations": 34750,
+  "topic_node_count": 0,
+  "topic_reason": "No reviewed Post Topic labels yet",
+  "passed": true
+}

@@ -1,0 +1,312 @@
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] initialized dimension=512 parameters=148288
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] {"samples":1023,"mse":0.0022409166030054103,"zero_mse":0.00195312523305824}
+[spark-worker-2] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-1] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-2]  GCC: "7.5.0"
+[spark-worker-2] STD version: 201103L
+[spark-worker-2] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-2] HAVE_FLATBUFFERS
+[spark-worker-2] HAVE_OPENBLAS
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-1]  GCC: "7.5.0"
+[spark-worker-1] STD version: 201103L
+[spark-worker-1] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-1] HAVE_FLATBUFFERS
+[spark-worker-1] HAVE_OPENBLAS
+[spark-worker-2] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-1] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-2] event=worker_start host=spark-worker-2 round=1 samples=2973 batch_size=64 batches=47
+[spark-worker-1] event=worker_start host=spark-worker-1 round=1 samples=2974 batch_size=64 batches=47
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=1/47 samples=2974 score=0.00224017 elapsed_seconds=0.2
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=1/47 samples=2973 score=0.00223391 elapsed_seconds=0.2
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=10/47 samples=2974 score=0.00191194 elapsed_seconds=0.5
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=10/47 samples=2973 score=0.00190987 elapsed_seconds=0.5
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=20/47 samples=2974 score=0.00189515 elapsed_seconds=0.7
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=20/47 samples=2973 score=0.00190432 elapsed_seconds=0.7
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=30/47 samples=2973 score=0.00188964 elapsed_seconds=0.9
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=30/47 samples=2974 score=0.00188959 elapsed_seconds=0.9
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=40/47 samples=2973 score=0.00187399 elapsed_seconds=1.0
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=40/47 samples=2974 score=0.00186428 elapsed_seconds=1.1
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=1 local_epoch=1 batch=47/47 samples=2973 score=0.00191456 elapsed_seconds=1.1
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=1 local_epoch=1 batch=47/47 samples=2974 score=0.00193288 elapsed_seconds=1.1
+[spark-worker-2] event=worker_complete host=spark-worker-2 round=1 samples=2973 batches=47 parameter_delta_l2=5.58642769 training_seconds=1.3 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_1_worker_2.zip
+[spark-worker-1] event=worker_complete host=spark-worker-1 round=1 samples=2974 batches=47 parameter_delta_l2=5.61102962 training_seconds=1.3 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_1_worker_1.zip
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] averaged samples=5947
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] {"samples":1023,"mse":0.001874455594014329,"zero_mse":0.00195312523305824}
+[spark-worker-2] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-1] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-2]  GCC: "7.5.0"
+[spark-worker-2] STD version: 201103L
+[spark-worker-2] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-2] HAVE_FLATBUFFERS
+[spark-worker-2] HAVE_OPENBLAS
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-1]  GCC: "7.5.0"
+[spark-worker-1] STD version: 201103L
+[spark-worker-1] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-1] HAVE_FLATBUFFERS
+[spark-worker-1] HAVE_OPENBLAS
+[spark-worker-1] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-2] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-2] event=worker_start host=spark-worker-2 round=2 samples=2973 batch_size=64 batches=47
+[spark-worker-1] event=worker_start host=spark-worker-1 round=2 samples=2974 batch_size=64 batches=47
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=1/47 samples=2973 score=0.00191965 elapsed_seconds=0.2
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=1/47 samples=2974 score=0.00190674 elapsed_seconds=0.2
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=10/47 samples=2974 score=0.00186741 elapsed_seconds=0.4
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=10/47 samples=2973 score=0.00187477 elapsed_seconds=0.4
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=20/47 samples=2974 score=0.00185006 elapsed_seconds=0.6
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=20/47 samples=2973 score=0.00186400 elapsed_seconds=0.6
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=30/47 samples=2973 score=0.00180600 elapsed_seconds=0.8
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=30/47 samples=2974 score=0.00179814 elapsed_seconds=0.8
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=40/47 samples=2974 score=0.00173051 elapsed_seconds=0.9
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=40/47 samples=2973 score=0.00176458 elapsed_seconds=0.9
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=2 local_epoch=1 batch=47/47 samples=2973 score=0.00173484 elapsed_seconds=1.0
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=2 local_epoch=1 batch=47/47 samples=2974 score=0.00179871 elapsed_seconds=1.0
+[spark-worker-2] event=worker_complete host=spark-worker-2 round=2 samples=2973 batches=47 parameter_delta_l2=7.26880360 training_seconds=1.2 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_2_worker_2.zip
+[spark-worker-1] event=worker_complete host=spark-worker-1 round=2 samples=2974 batches=47 parameter_delta_l2=7.30308914 training_seconds=1.2 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_2_worker_1.zip
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] averaged samples=5947
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] {"samples":1023,"mse":0.001747940948282169,"zero_mse":0.00195312523305824}
+[spark-worker-1] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-2] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-worker-2] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-1] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-2] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [1]; Memory: [0.5GB];
+[spark-worker-1] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-worker-2] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-2]  GCC: "7.5.0"
+[spark-worker-2] STD version: 201103L
+[spark-worker-2] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-2] HAVE_FLATBUFFERS
+[spark-worker-2] HAVE_OPENBLAS
+[spark-worker-1] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-worker-1]  GCC: "7.5.0"
+[spark-worker-1] STD version: 201103L
+[spark-worker-1] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-worker-1] HAVE_FLATBUFFERS
+[spark-worker-1] HAVE_OPENBLAS
+[spark-worker-2] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-1] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-worker-2] event=worker_start host=spark-worker-2 round=3 samples=2973 batch_size=64 batches=47
+[spark-worker-1] event=worker_start host=spark-worker-1 round=3 samples=2974 batch_size=64 batches=47
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=1/47 samples=2973 score=0.00180674 elapsed_seconds=0.2
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=1/47 samples=2974 score=0.00175291 elapsed_seconds=0.2
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=10/47 samples=2973 score=0.00178107 elapsed_seconds=0.3
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=10/47 samples=2974 score=0.00174250 elapsed_seconds=0.4
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=20/47 samples=2973 score=0.00177028 elapsed_seconds=0.5
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=20/47 samples=2974 score=0.00175164 elapsed_seconds=0.6
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=30/47 samples=2973 score=0.00169777 elapsed_seconds=0.6
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=40/47 samples=2973 score=0.00166846 elapsed_seconds=0.8
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=30/47 samples=2974 score=0.00166819 elapsed_seconds=0.8
+[spark-worker-2] event=worker_batch host=spark-worker-2 round=3 local_epoch=1 batch=47/47 samples=2973 score=0.00166733 elapsed_seconds=0.9
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=40/47 samples=2974 score=0.00163470 elapsed_seconds=0.9
+[spark-worker-1] event=worker_batch host=spark-worker-1 round=3 local_epoch=1 batch=47/47 samples=2974 score=0.00173494 elapsed_seconds=1.0
+[spark-worker-2] event=worker_complete host=spark-worker-2 round=3 samples=2973 batches=47 parameter_delta_l2=8.29183578 training_seconds=1.1 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_3_worker_2.zip
+[spark-worker-1] event=worker_complete host=spark-worker-1 round=3 samples=2974 batches=47 parameter_delta_l2=8.19942093 training_seconds=1.2 model=/workspace/outputs/g05/models/vitied-g05-captiononly-ae64-live-20261016.__staging__/round_3_worker_1.zip
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] averaged samples=5947
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] {"samples":1023,"mse":0.0016609692503629892,"zero_mse":0.00195312523305824}
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] {"samples":1284,"mse":0.001654872083978443,"zero_mse":0.0019531249296430766}
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] embedded samples=5947
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] embedded samples=1023
+[spark-driver] [main] INFO org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+[spark-driver] [main] INFO org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for linear algebra: 1
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory - Binary level Generic x86 optimization level AVX/AVX2
+[spark-driver] [main] INFO org.nd4j.nativeblas.Nd4jBlas - Number of threads used for OpenMP BLAS: 1
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Cores: [2]; Memory: [0.5GB];
+[spark-driver] [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+[spark-driver] [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend - Backend build information:
+[spark-driver]  GCC: "7.5.0"
+[spark-driver] STD version: 201103L
+[spark-driver] DEFAULT_ENGINE: samediff::ENGINE_CPU
+[spark-driver] HAVE_FLATBUFFERS
+[spark-driver] HAVE_OPENBLAS
+[spark-driver] [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+[spark-driver] embedded samples=1284

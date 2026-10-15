@@ -1,0 +1,30 @@
+{
+  "feature_source_version": "vitied-g05-content-v1",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "silver_path": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+  "source_rows": 34750,
+  "posts": 9114,
+  "missing_first_snapshot": {
+    "no_caption": 781,
+    "no_hashtags": 1179,
+    "neither": 325
+  },
+  "readback": 9114,
+  "task_hosts": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "application_id": "app-20261014092305-0002",
+  "exported_at_utc": "2026-10-14T09:23:35.586311+00:00",
+  "checksums": {
+    "part-00000-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "e3a08959e473523e4aa9705749b54abddba50584fec2df8bd23e5984ea2f0062",
+    "part-00001-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "390cc52454790fd06195d72ac34dd8e843efd3388771192fe0bd8cb0b91516b6",
+    "part-00002-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "99e0599f92e29c7204db8553ae79edf7a041b92d8d266ff929675ed9f5cf8b48",
+    "part-00003-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "1a958d08af8e41f7a79bbcfb654805a0c3f1d1509155f328480db4209a45da21",
+    "part-00004-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "e2cec1f4f76ea47cf76a644af830bed8452cf393ce092257b9e46c6a8279726c",
+    "part-00005-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "01560b06c2d3127ccbb6ce7bf883aa56959e3d52b8ec0385170fad08d772a758",
+    "part-00006-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "0e3d204e0c41dffe7922f09fab034b8ba85a1de8cdb406a085851b86b8eb7425",
+    "part-00007-51af667d-7e0c-47d8-bd94-57cee0e3d792-c000.json": "9976f296c26de893733ec720c755ed0f896c19c6c2ff5cc09748419128a3ba00"
+  },
+  "passed": true
+}

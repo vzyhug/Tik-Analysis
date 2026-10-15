@@ -1,0 +1,36 @@
+{
+  "schema_version": "vitied-silver-v3",
+  "bronze": "/trend/vitied/bronze/vitied-20261013-370234d0358b",
+  "silver": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+  "application_id": "app-20261013163900-0005",
+  "master": "spark://spark-master:7077",
+  "source_rows": 34750,
+  "source_by_file": {
+    "streaming_data.csv": 5114,
+    "training_data.csv": 29636
+  },
+  "accepted_observations": 34750,
+  "duplicate_observations": 0,
+  "conflicting_observations": 0,
+  "identity_conflict_rows": 0,
+  "quarantine_rows": 0,
+  "tables": {
+    "posts": 9114,
+    "observations": 34750,
+    "post_hashtags": 40624,
+    "creator_categories": 402,
+    "quarantine": 0
+  },
+  "readback": {
+    "posts": 9114,
+    "observations": 34750,
+    "post_hashtags": 40624,
+    "creator_categories": 402,
+    "quarantine": 0
+  },
+  "normalization_task_hosts": [
+    "spark-worker-1",
+    "spark-worker-2"
+  ],
+  "passed": true
+}

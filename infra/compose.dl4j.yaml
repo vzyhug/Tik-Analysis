@@ -1,0 +1,16 @@
+name: trend-detect-ml
+services:
+  dl4j:
+    image: maven:3.9.9-eclipse-temurin-17
+    working_dir: /workspace/apps/dl4j
+    mem_limit: 2048m
+    cpus: 2.0
+    environment:
+      MAVEN_OPTS: "-Xmx768m -Dfile.encoding=UTF-8"
+      OMP_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+    volumes:
+      - ../:/workspace
+      - maven-cache:/root/.m2
+volumes:
+  maven-cache:

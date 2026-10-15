@@ -1,0 +1,7 @@
+{
+  "model_version": "vitied-g05-ae64-v2",
+  "expected_validation_mse": 0.0017282755088026279,
+  "reloaded_validation_mse": 0.0017282755088026279,
+  "absolute_difference": 0.0,
+  "passed": true
+}

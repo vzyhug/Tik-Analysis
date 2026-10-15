@@ -1,0 +1,40 @@
+{
+  "feature_version": "vitied-g05-hashidf512-v2",
+  "source_feature_version": "vitied-g05-content-v1",
+  "dataset_version": "vitied-20261013-370234d0358b",
+  "source_posts": 9114,
+  "split_seed": "vitied-author-split-v1",
+  "split_counts": {
+    "test": 1422,
+    "train": 6572,
+    "validation": 1120
+  },
+  "usable_counts": {
+    "train": 6326,
+    "validation": 1095,
+    "test": 1341
+  },
+  "abstain_count": 352,
+  "source_empty_count": 325,
+  "vector_empty_count": 27,
+  "author_counts": {
+    "train": 275,
+    "validation": 49,
+    "test": 60
+  },
+  "input_dimension": 512,
+  "normalization": "hashing 512 + IDF fitted on train only, L2",
+  "content_policy": "earliest observed snapshot, same-row caption and hashtags",
+  "created_at_utc": "2026-10-14T09:33:04.987633+00:00",
+  "checksums": {
+    "train.tsv": "7f28b56770bd28caf521602552d20d6edaa197e6ec58eff6fdc5be43295a6ca6",
+    "validation.tsv": "2102be8f86d34e209e165ddba6e91619bdcc940e225e8dca4de9d69b97584715",
+    "test.tsv": "21451007f9899db3f5c47cdb5a47f7f3934d3a6bc7cc4cd485ab362ea587b4fa",
+    "train_worker_1.tsv": "a8d956e2f25969aeee6781ff3fb452fefed47e8732edc2f323498c2d0794427d",
+    "train_worker_2.tsv": "b90aca3c013c417c2f17a1c04b034f77e35f21c20d735ddefac4c169787e013d",
+    "split_manifest.jsonl": "7186687c72d737ddce7644dae91c74f9f7115ddf9b670e9b8087250cd0464260",
+    "tfidf.joblib": "606657a836fe8488ce3cbd6ee4595f12cfb02f9f483ec35762d5840aff369bba",
+    "feature_contract.json": "dc176a5b0cb09c7171b8291af49559f3b5c2b7a33b619c5598f25051a4bd2935"
+  },
+  "passed": true
+}

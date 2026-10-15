@@ -1,0 +1,49 @@
+﻿{
+    "schema":  "codex.powerbi.dataContractDraft.v1",
+    "sources":  [
+                    "vw_post_period",
+                    "vw_hashtag_period",
+                    "vw_hashtag_pair_period",
+                    "vw_engagement_observation",
+                    "vw_coverage",
+                    "vw_topic_period",
+                    "vw_topic_hashtag",
+                    "vw_topic_sound",
+                    "vw_publication"
+                ],
+    "facts":  [
+                  "FactPostPeriod",
+                  "FactHashtagPeriod",
+                  "FactHashtagPairPeriod",
+                  "FactEngagementObservation",
+                  "FactCoverage",
+                  "FactTopicPeriod",
+                  "FactTopicHashtag",
+                  "FactTopicSound"
+              ],
+    "dimensions":  [
+                       "DimPublishedDate",
+                       "DimObservedDate",
+                       "DimMediaType",
+                       "DimHashtag",
+                       "DimPublication"
+                   ],
+    "rules":  [
+                  "All facts are filtered to one current immutable publication through PostgreSQL views.",
+                  "Use PostsPublished only from FactPostPeriod; hashtag/pair support are associations and do not sum to distinct Posts.",
+                  "Use separate published-date and observed-date dimensions.",
+                  "Keep TikTok post_id as Text.",
+                  "Review label source and null policy before adding Topic measures."
+              ],
+    "evidenceMaturity":  "Draft based on passed G06 and local PostgreSQL verification",
+    "datePolicy":  "published_date and observed_date are local Asia/Ho_Chi_Minh dates; observed_at_utc and published_at_utc remain UTC instants",
+    "nullPolicy":  "Preserve null interaction metrics; do not replace null with zero",
+    "topicPolicy":  "topic_* are empty pending reviewed Post labels; creator_category and DL4J clusters are not Topic labels",
+    "grains":  {
+                   "FactPostPeriod":  "publication_date x media_type",
+                   "FactHashtagPeriod":  "publication_date x tag_key",
+                   "FactHashtagPairPeriod":  "publication_date x unordered tag pair",
+                   "FactEngagementObservation":  "post_id x observed_at_utc",
+                   "FactCoverage":  "publication_date x media_type"
+               }
+}

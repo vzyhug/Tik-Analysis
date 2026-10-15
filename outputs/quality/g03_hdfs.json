@@ -1,0 +1,21 @@
+{
+  "bronze": {
+    "path": "/trend/vitied/bronze/vitied-20261013-370234d0358b",
+    "fsck_evidence": "outputs\\quality\\g03_hdfs_fsck_bronze.txt",
+    "blocks": 2,
+    "data_nodes": 3,
+    "missing_blocks": 0,
+    "average_replication": 2.0,
+    "healthy": true
+  },
+  "silver": {
+    "path": "/trend/vitied/silver/vitied-silver-v3/vitied-20261013-370234d0358b",
+    "fsck_evidence": "outputs\\quality\\g03_hdfs_fsck_silver.txt",
+    "blocks": 12,
+    "data_nodes": 3,
+    "missing_blocks": 0,
+    "average_replication": 2.0,
+    "healthy": true
+  },
+  "passed": true
+}

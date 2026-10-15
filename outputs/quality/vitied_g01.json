@@ -1,0 +1,184 @@
+{
+  "schema_version": "vitied-g01-v1",
+  "generated_at_utc": "2026-10-13T09:14:21.945179+00:00",
+  "source_files": [
+    {
+      "source_file": "training_data.csv",
+      "rows": 29636,
+      "bytes": 16189863,
+      "sha256": "370234d0358b7103e7574dd7718054e82f53ce5092a6024e1ec5ed288b8b0c10",
+      "columns": [
+        "Unnamed: 0",
+        "user_name",
+        "user_nfollower",
+        "user_total_likes",
+        "vid_id",
+        "vid_caption",
+        "vid_postTime",
+        "vid_scrapeTime",
+        "vid_duration",
+        "vid_nview",
+        "vid_nlike",
+        "vid_ncomment",
+        "vid_nshare",
+        "vid_nsave",
+        "vid_hashtags",
+        "vid_url",
+        "music_id",
+        "music_title",
+        "music_nused",
+        "music_authorName",
+        "music_originality",
+        "topic",
+        "vid_desc_clean",
+        "vid_hashtags_normalized",
+        "hashtag_count",
+        "vid_duration_sec",
+        "vid_existtime_hrs",
+        "post_hour",
+        "post_day"
+      ]
+    },
+    {
+      "source_file": "streaming_data.csv",
+      "rows": 5114,
+      "bytes": 1944254,
+      "sha256": "fa9fe04c9144050f34375b2cc3cfb4e9edc3a0b15b7f36af7c9476e33e8d21da",
+      "columns": [
+        "user_name",
+        "user_nfollower",
+        "user_total_likes",
+        "vid_id",
+        "vid_caption",
+        "vid_postTime",
+        "vid_scrapeTime",
+        "vid_duration",
+        "vid_nview",
+        "vid_nlike",
+        "vid_ncomment",
+        "vid_nshare",
+        "vid_nsave",
+        "vid_hashtags",
+        "vid_url",
+        "music_id",
+        "music_title",
+        "music_nused",
+        "music_authorName",
+        "music_originality",
+        "topic"
+      ]
+    }
+  ],
+  "counts": {
+    "accepted_observation_rows": 34750,
+    "authors_with_multiple_category_sets": 0,
+    "canonical_photo_posts": 383,
+    "canonical_posts": 9114,
+    "canonical_video_posts": 8731,
+    "posts_with_conflicting_publish_minutes": 0,
+    "posts_with_multiple_publish_times": 1829,
+    "quarantine_rows": 0,
+    "source_rows": 34750,
+    "unique_authors": 384
+  },
+  "by_file": {
+    "streaming_data.csv": {
+      "missing_caption": 543,
+      "missing_hashtags": 737,
+      "raw_url_id_mismatch_rows": 5114,
+      "rows": 5114,
+      "unknown_creator_category_rows": 440,
+      "unverified_music_id_rows": 5108,
+      "url_photo_rows": 213,
+      "url_video_rows": 4901
+    },
+    "training_data.csv": {
+      "missing_caption": 2397,
+      "missing_hashtags": 3728,
+      "rows": 29636,
+      "unknown_creator_category_rows": 80,
+      "unverified_music_id_rows": 29559,
+      "url_photo_rows": 1248,
+      "url_video_rows": 28388
+    }
+  },
+  "missing_by_file": {
+    "streaming_data.csv": {
+      "music_authorName": 744,
+      "music_id": 6,
+      "music_nused": 281,
+      "music_title": 314,
+      "topic": 440,
+      "user_nfollower": 5,
+      "user_total_likes": 5,
+      "vid_caption": 543,
+      "vid_hashtags": 737
+    },
+    "training_data.csv": {
+      "music_authorName": 4,
+      "music_id": 77,
+      "music_nused": 1771,
+      "music_originality": 9,
+      "topic": 80,
+      "user_nfollower": 39,
+      "user_total_likes": 39,
+      "vid_caption": 2397,
+      "vid_desc_clean": 2781,
+      "vid_duration": 1,
+      "vid_duration_sec": 1248,
+      "vid_hashtags": 3728
+    }
+  },
+  "metric_text_formats": {
+    "vid_ncomment": {
+      "numeric_text": 34750
+    },
+    "vid_nlike": {
+      "numeric_text": 34750
+    },
+    "vid_nsave": {
+      "numeric_text": 34750
+    },
+    "vid_nshare": {
+      "numeric_text": 33902,
+      "share_placeholder": 848
+    },
+    "vid_nview": {
+      "numeric_text": 34750
+    }
+  },
+  "creator_category_row_mentions": {
+    "beauty": 12129,
+    "fashion": 8736,
+    "food": 1626,
+    "health": 5117,
+    "mom_and_baby": 5753,
+    "tech_and_household": 4002
+  },
+  "published_at_utc_range": [
+    "2022-12-06T15:47:14+00:00",
+    "2025-06-28T04:43:43+00:00"
+  ],
+  "observed_at_utc_range": [
+    "2025-06-23T16:12:05+00:00",
+    "2025-07-01T22:25:21+00:00"
+  ],
+  "identity": {
+    "raw_ids_mapping_to_multiple_url_ids": 0,
+    "url_ids_mapping_to_multiple_raw_ids": 0,
+    "url_ids_with_multiple_authors": 0,
+    "url_ids_with_multiple_media_types": 0,
+    "raw_url_mismatch_absolute_delta_range": [
+      257,
+      312
+    ],
+    "canonical_policy": "Validated TikTok /video/ or /photo/ URL ID; one-to-one stable raw-to-URL mapping and author/media type. Preserve raw ID."
+  },
+  "category_policy": "Source topic is a creator category, never reviewed post topic; six casefolded values, unknown remains null.",
+  "time_policy": "Preserve raw posting timestamps on observations. Canonical post time has minute precision because some source snapshots vary in seconds; any conflict across minutes requires review.",
+  "grain": {
+    "identity_csv": "one canonical TikTok post",
+    "quarantine_csv": "one source CSV row",
+    "accepted_observation": "canonical_post_id + observed_at_utc"
+  }
+}
