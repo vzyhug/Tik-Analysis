@@ -4,9 +4,9 @@
 
 ## Phạm vi và trạng thái
 
-- ViTIED là nguồn dữ liệu duy nhất của project. Hai CSV gốc ở `data/raw/vitied/`, manifest ở `data/raw/manifests/vitied_source_20261013.json`; G01–G04 đã đạt gate cho đúng source version này theo bằng chứng có sẵn. G05 đã train DL4J phân tán nhưng còn chờ nhãn Topic cấp Post được rà soát; G06–G09 chưa nghiệm thu.
+- ViTIED là nguồn dữ liệu duy nhất của project. Hai CSV gốc ở `data/raw/vitied/`, manifest ở `data/raw/manifests/vitied_source_20261013.json`; G01–G04 đã đạt gate cho đúng source version này theo bằng chứng có sẵn. G05 đã train DL4J phân tán nhưng còn chờ nhãn Topic cấp Post được rà soát; G06 đã đối soát; G07 dashboard đang chờ kiểm tra trực quan; G08–G09 chưa triển khai.
 - Bài `/video/` và `/photo/` đều là `Post`, phân biệt bằng `media_type`. Một Post có nhiều Observation theo `observed_at_utc`. `topic` CSV là `creator_category` của tác giả, **không phải** nhãn chủ đề của Post.
-- HDFS Bronze/Silver/Gold, Spark Standalone, Neo4j, DL4J và web dashboard là kiến trúc đang dùng. Neo4j là DB phục vụ web duy nhất: Post/Observation/Hashtag/Sound/Topic và quan hệ; API dashboard chỉ phát truy vấn đọc. PostgreSQL G07 là release lịch sử, không chạy trong web stack. Neo4j Community không có role read-only thực: tài khoản ứng dụng vẫn có quyền admin; bind web loopback và chỉ gửi query đọc là biện pháp giới hạn hiện tại. Docker là cụm một host: 1 NameNode + 3 DataNode (replication 2), 1 Spark Master + 2 Worker và driver riêng. G05 dùng hai JVM DL4J CPU trong hai container worker, đồng bộ trọng số bằng coordinator ở driver; đây không phải Spark executor task train.
+- HDFS Bronze/Silver/Gold, Spark Standalone, Neo4j, DL4J và web dashboard là kiến trúc đang dùng. Neo4j là DB phục vụ web duy nhất: Post/Observation/Hashtag/Sound/Topic và quan hệ; API dashboard chỉ phát truy vấn đọc. Neo4j Community không có role read-only thực: tài khoản ứng dụng vẫn có quyền admin; bind web loopback và chỉ gửi query đọc là biện pháp giới hạn hiện tại. Docker là cụm một host: 1 NameNode + 3 DataNode (replication 2), 1 Spark Master + 2 Worker và driver riêng. G05 dùng hai JVM DL4J CPU trong hai container worker, đồng bộ trọng số bằng coordinator ở driver; đây không phải Spark executor task train.
 - NiFi/Kafka replay là phần mở rộng sau batch. GDS và API chỉ triển khai khi cần. Không dùng framework ML khác thay DL4J nếu người dùng chưa đổi quyết định.
 
 ## Gate G01–G09
@@ -43,7 +43,7 @@ M1 = G01–G03; M2 = G04–G07; M3 = G08–G09 nếu chọn streaming. Khi đư�
 
 ## Hạ tầng, kiểm tra và cách làm việc
 
-- Giữ Docker volumes NameNode/DataNode/Spark/Neo4j; không format NameNode, `down -v` hoặc reset database trong lệnh chạy thường lệ. PostgreSQL volume lịch sử nếu còn thì không xóa; dashboard stack không khởi động PostgreSQL. Địa chỉ trong container dùng service name, từ Windows dùng cổng publish. PySpark Standalone chạy `spark-submit` client mode từ driver.
+- Giữ Docker volumes NameNode/DataNode/Spark/Neo4j; không format NameNode, `down -v` hoặc reset database trong lệnh chạy thường lệ. Địa chỉ trong container dùng service name, từ Windows dùng cổng publish. PySpark Standalone chạy `spark-submit` client mode từ driver.
 - HDFS kiểm tra bằng read-back SHA/count và fsck block/locations; Spark kiểm tra event/task trên cả hai worker và output tương đương local. Một host/container không chứng minh HA host. Benchmark giữ cùng dataset/job, core/RAM và output.
 - Python: module/hàm rõ nhiệm vụ, schema Spark tường minh, type hints cho điều phối, Spark built-in khi phù hợp; tránh collect toàn bộ data cho xử lý phân tán. Java DL4J khóa phiên bản đồng bộ, chạy CPU/native smoke trước training. Secret lấy từ file/env, không commit token/password.
 - Tìm file/text bằng `rg --files`/`rg`. Kiểm tra Git trước sửa, giữ thay đổi người dùng ngoài phạm vi. Cập nhật README và progress khi thay đổi entry point, schema hoặc trạng thái gate. Test hành vi/rủi ro thật; nếu thiếu Docker hoặc dữ liệu, báo giới hạn, không mô tả fixture như nghiệm thu cụm.

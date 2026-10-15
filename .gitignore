@@ -6,7 +6,6 @@ data/predictions/
 data/quarantine/*
 !data/quarantine/vitied_g01_pointers.csv
 models/
-outputs/powerbi/
 *.log
 .env
 __pycache__/
